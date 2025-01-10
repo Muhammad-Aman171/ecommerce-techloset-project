@@ -14,11 +14,10 @@ import LatestNewsSection from "../components/homePage/LatestNewsSection.tsx";
 const Home: React.FC = () => {
   return (
     <div>
-      <div className="font-poppins  flex flex-col justify-center ">
+      <div className="font-poppins flex flex-col justify-center items-center ">
         <HeroSection />
         <ProductReviewSection />
         <PopularProductsBtns />
-        {/* <FilterCategories /> */}
         <PopularProductsCards />
         <LaptopSale />
         <ProductDetails />

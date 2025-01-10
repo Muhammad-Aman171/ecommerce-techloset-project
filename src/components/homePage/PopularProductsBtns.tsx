@@ -135,7 +135,7 @@ const PopularProducts: React.FC = () => {
   return (
     <div>
       {" "}
-      <div className="flex justify-between items-center my-20 mx-8 gap-x-4 max-md:flex-col max-md:items-start max-md:my-10">
+      <div className="flex justify-between items-center w-full my-20 mx-8 gap-x-4 max-md:flex-col max-md:items-start max-md:my-10">
         <div className="w-[250px] ">
           <h1 className="text-[27.38px] text-textColor leading-[41.07px] font-semibold text-nowrap  ">
             Popular products

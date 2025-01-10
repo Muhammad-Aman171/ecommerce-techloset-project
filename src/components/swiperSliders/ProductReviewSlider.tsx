@@ -37,7 +37,7 @@ const ProductReview: React.FC = () => {
   }
 
   return (
-    <div className=" w-full">
+    <div className="flex justify-center items-center w-full">
       <Swiper
         modules={[Navigation, Pagination]} // Enable Navigation and Pagination
         spaceBetween={30} // Gap between slides
@@ -53,17 +53,18 @@ const ProductReview: React.FC = () => {
           <SwiperSlide>
             <Link to={`/products/${limitProduct.id}`}>
               <div
-                className={` ${limitProduct.id} border border-borderColor flex items-center rounded-[20px] gap-x-[43.35px] px-[14px]  `}
+                className={` ${limitProduct.id} border border-borderColor grid grid-cols-2 place-items-center justify-center rounded-[20px] gap-x-[43.35px] px-[14px] h-[147px] max-w-[390px]  `}
               >
-                <span>
+                <span className=" h-[130px] ">
                   <img
                     src={limitProduct.image}
                     alt="laptop product img does not show"
+                    className="w-[110px] h-[130px] "
                   />
                 </span>
                 <div className=" my-[37px]  ">
-                  <p className="text-[21.38px] font-semibold text-textColor leading-[32.07px  ] ">
-                    {limitProduct.title}
+                  <p className="text-[21.38px] font-semibold text-textColor leading-[32.07px] w-[170px] h-[30px]  ">
+                    {limitProduct.title.slice(0, 10) + "..."}
                   </p>
                   <p className="text-[18.85px] text-[#265F7F] leading-[28.27px]  font-medium ">
                     (6 items)

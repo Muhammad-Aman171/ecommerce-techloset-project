@@ -3,6 +3,7 @@ import { configureStore } from "@reduxjs/toolkit";
 import productReducer from "./slices/ProductsSlice.ts";
 import limitProductsReducer from "./slices/LimitProductsSlice.ts";
 import filterSliceReducer from "./slices/FilterCategoriesSlice.ts";
+import addToCartReducer from "./slices/AddToCartSlice.ts";
 // import fetchProductsByCategoryReducer from "./slices/FetchProductsByCategoriesSlice.ts";
 
 // import postsReducer from "./slices/PractiseSlice.ts";
@@ -12,6 +13,7 @@ export const store = configureStore({
     productSlice: productReducer,
     limitProductSlice: limitProductsReducer,
     filterSlice: filterSliceReducer,
+    addToCartSlice: addToCartReducer,
     // fetchProductsByCategorySlice: fetchProductsByCategoryReducer,
     // postsSlice: postsReducer,
   },

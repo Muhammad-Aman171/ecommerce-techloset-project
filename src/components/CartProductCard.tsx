@@ -1,10 +1,23 @@
 import React, { useState } from "react";
+// import { useSelector, useDispatch } from "react-redux";
+// import { RootState, AppDispatch } from "../store/store.ts";
+// import { addToCart } from "../store/slices/AddToCartSlice.ts";
 import GamePlayImg1 from "../assets/imgs/gameplaysmallimg.png";
 // import { RxCrossCircled } from "react-icons/rx";
 
 const CartProductCard: React.FC = () => {
   const [count, setCount] = useState(0);
 
+  // const products = useSelector((state: RootState) => state.productSlice.products);
+  // const dispatch: AppDispatch = useDispatch();
+
+  // const handleAddToCart = (product: {
+  //   id: number;
+  //   name: string;
+  //   price: number;
+  // }) => {
+  //   dispatch(addToCart(product));
+  // };
   return (
     <div>
       <div className="grid grid-cols-5 place-items-center ">

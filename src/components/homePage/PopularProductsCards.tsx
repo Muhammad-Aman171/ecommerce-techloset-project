@@ -33,7 +33,7 @@ const PopularProductsCards: React.FC = () => {
     filteredProducts.length > 0 ? filteredProducts : products;
 
   return (
-    <div className="grid grid-cols-[repeat(auto-fit,minmax(308.83px,1fr))] justify-items-center  justify-center items-center gap-[26px] my-20 mx-[55px] ">
+    <div className="grid grid-cols-[repeat(auto-fit,minmax(308.83px,1fr))] justify-items-center  place-items-center gap-[26px] w-full my-20 mx-[55px] ">
       {displayProduct.map((product) => (
         <Link to={`/products/${product.id}`}>
           <ProductCard
@@ -45,8 +45,6 @@ const PopularProductsCards: React.FC = () => {
           />
         </Link>
       ))}
-
-      {/* <ProductCard/> */}
     </div>
   );
 };

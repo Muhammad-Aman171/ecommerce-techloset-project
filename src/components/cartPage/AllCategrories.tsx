@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import CheckBoxCategroy from "../CheckBoxCategroy.tsx";
 import ProductCard from "../ProductCard.tsx";
 import LaptopSale from "../LaptopSale.tsx";
-import { filterByCategory } from "../../store/slices/FilterCategoriesSlice.ts";
+// import { filterByCategory } from "../../store/slices/FilterCategoriesSlice.ts";
 import { fetchProducts } from "../../store/slices/ProductsSlice.ts";
 import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, RootState } from "../../store/store.ts";
@@ -15,13 +15,13 @@ const AllCategrories: React.FC = () => {
 
 
   
-  const allProducts = useSelector(
-    (state: RootState) => state.productSlice.products
-  );
+  // const allProducts = useSelector(
+  //   (state: RootState) => state.productSlice.products
+  // );
 
-  const handleFilter = (category: string) => {
-    dispatch(filterByCategory({ category, products: allProducts }));
-  };
+  // const handleFilter = (category: string) => {
+  //   dispatch(filterByCategory({ category, products: allProducts }));
+  // };
   const status = useSelector((state: RootState) => state.productSlice.status);
   const error = useSelector((state: RootState) => state.productSlice.error);
 

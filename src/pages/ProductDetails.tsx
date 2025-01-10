@@ -14,7 +14,7 @@ import { RootState } from "../store/store.ts";
 const ProductDetails: React.FC = () => {
   const [count, setCount] = useState(0);
 
-  const { id } = useParams(); 
+  const { id } = useParams();
   const allProducts = useSelector(
     (state: RootState) => state.productSlice.products
   );
@@ -29,16 +29,20 @@ const ProductDetails: React.FC = () => {
   return (
     <div className="flex justify-center mx-auto  ">
       <div className="flex flex-col items-center justify-center gap-x-[49px] m-[30px] max-md:mx-[20px] ">
-        <div className="flex justify-center gap-x-[49px] max-xl:flex-col  ">
+        <div className="flex items-center justify-center gap-x-[49px] max-xl:flex-col  ">
           <div className=" flex flex-col items-center gap-y-[25px] ">
             <div className=" max-sm:w-[300px] ">
-              <img src={product.image} alt="play game img does not show" />
+              <img
+                src={product.image}
+                alt="play game img does not show"
+                className="w-[630px] h-[500px] max-sm:h-[300px]  "
+              />
             </div>
           </div>
           <div className="flex flex-col items-start ">
             <div className="flex flex-col gap-y-4 ">
               <h1 className="text-[29.68px] text-[#003F62] leading-[44.51px] font-medium text-start text-nowrap ">
-                {product.title}
+                {product.title.slice(0, 15) + "..."}
               </h1>
               <h2 className="text-[29.68px] text-[#4A4A4A] leading-[44.51px] font-semibold text-start text-nowrap ">
                 {product.price}

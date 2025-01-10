@@ -22,12 +22,12 @@ const LatestNewsSection = () => {
           View all
         </h3>
       </div>
-      <div className="flex gap-x-[20px] max-lg:hidden  ">
+      <div className="flex gap-x-[20px] max-lg:hidden   ">
         <LatestNewsCard scrImg={LatestProductImg1} />
         <LatestNewsCard scrImg={LatestProductImg2} />
       </div>
 
-      <div className="flex gap-x-[20px] lg:hidden ">
+      <div className="flex gap-x-[20px] lg:hidden  w-[700px]">
         <Swiper
           modules={[Navigation, Pagination]} // Enable Navigation and Pagination
           spaceBetween={30} // Gap between slides

@@ -6,10 +6,11 @@ import { GoHeart } from "react-icons/go";
 interface ProductCardTypesProps {
   className?: string;
   heartStyle?: string;
-  key?: number;
+  key?: number | undefined;
   title?: string;
   price?: number;
   image?: string;
+  onClick?: () => void;
 }
 
 const ProductCard: React.FC<ProductCardTypesProps> = ({
@@ -37,7 +38,7 @@ const ProductCard: React.FC<ProductCardTypesProps> = ({
         </div>
         <div className=" text-start absolute bottom-4 left-5 flex flex-col gap-y-3  group-hover:hidden duration-500 ">
           <p className="text-[17.09px] font-semibold text-[#003F62] leading-[25.64px] mt-3 mb-[-10px]  ">
-            {title}
+            {title?.slice(0, 8) + "..."}
           </p>
           <p className="text-[#4A4A4A] text-[17.09px] leading-[25.64px] font-semibold  ">
             {` $${price}`}
@@ -51,7 +52,7 @@ const ProductCard: React.FC<ProductCardTypesProps> = ({
           </div>
         </div>
         <div className=" opacity-0 absolute bottom-3 group-hover:opacity-100 duration-500 ">
-          <AddToCartBtns />
+          <AddToCartBtns key={key} />
         </div>
       </div>
     </>

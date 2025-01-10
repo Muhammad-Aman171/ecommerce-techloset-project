@@ -20,7 +20,7 @@ const MembersSection = () => {
         <MembersCard scrImg={MembersImg2} name="Esther Howard" />
         <MembersCard scrImg={MembersImg3} name="Esther Howard" />
       </div>
-      <div className="flex gap-x-2.5 my-10 lg:hidden  ">
+      <div className="flex gap-x-2.5 my-10 lg:hidden w-[700px] ">
         <Swiper
           modules={[Navigation, Pagination]} // Enable Navigation and Pagination
           spaceBetween={30} // Gap between slides

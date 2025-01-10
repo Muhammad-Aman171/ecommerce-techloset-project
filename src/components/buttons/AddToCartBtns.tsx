@@ -2,10 +2,14 @@ import React from "react";
 import AddToCartBtn from "./AddToCartBtn.tsx";
 import AddCartEye from "./AddCartEye.tsx";
 
-const AddToCartCard: React.FC = () => {
+interface ButtonsTypesProps {
+  key?: number | undefined;
+}
+
+const AddToCartCard: React.FC<ButtonsTypesProps> = ({  key }) => {
   return (
     <div className="flex gap-x-3  ">
-      <AddToCartBtn />
+      <AddToCartBtn key={key} />
       <AddCartEye />
     </div>
   );

@@ -6,7 +6,7 @@ import UnFillCircle from "../slidersCircles/UnFillCircle.tsx";
 
 const HeroSection = () => {
   return (
-    <div className="flex justify-around items-center max-lg:gap-x-[20px] max-lg:justify-evenly max-md:flex-col-reverse    ">
+    <div className="flex justify-around items-center w-full max-lg:gap-x-[20px] max-lg:justify-evenly max-md:flex-col-reverse    ">
       <div className="flex flex-col items-start justify-around gap-y-5  max-md:items-center ">
         <span className="max-md:hidden ">
           <h1 className="text-textColor text-[43px] font-bold leading-[64.5px]  ">
