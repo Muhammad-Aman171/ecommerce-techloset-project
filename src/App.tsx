@@ -61,14 +61,6 @@ function App() {
         </>
       ),
     },
-    // {
-    //   path: "/Practise",
-    //   element: (
-    //     <>
-    //       <Practise/>
-    //     </>
-    //   ),
-    // },
   ]);
   return (
     <div className="App">

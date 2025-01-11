@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-// import ProductCard from "../components/ProductCard.tsx";
 import StarImg from "../assets/imgs/star.png";
 import Button from "../components/buttons/button.tsx";
 import { GoHeart } from "react-icons/go";
@@ -19,7 +18,6 @@ const ProductDetails: React.FC = () => {
     (state: RootState) => state.productSlice.products
   );
 
-  // Find the product by ID
   const product = allProducts.find((product) => product.id === Number(id));
 
   if (!product) {

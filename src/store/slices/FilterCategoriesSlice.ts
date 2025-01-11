@@ -37,10 +37,9 @@ const filterSlice = createSlice({
     
   },
 });
-
+  
 export const { filterByCategory } = filterSlice.actions;
 
-// Selector for filtered products
 export const selectFilteredProducts = (state: RootState) =>
   state.filterSlice.filteredProducts;
 

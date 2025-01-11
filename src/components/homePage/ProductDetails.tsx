@@ -2,7 +2,8 @@ import React from "react";
 import { AiTwotoneStar } from "react-icons/ai";
 import BigSpeakerImg from "../../assets/imgs/bigspeaker.png";
 import NumberCircle from "../NumberCircle/NumberCircle.tsx";
-import AddToCartCard from "../buttons/AddToCartBtns.tsx";
+import AddToCartBtn from "../buttons/AddToCartBtn.tsx";
+import AddCartEye from "../buttons/AddCartEye.tsx";
 import FillCircle from "../slidersCircles/FillCircle.tsx";
 import UnFillCircle from "../slidersCircles/UnFillCircle.tsx";
 
@@ -35,16 +36,16 @@ const ProductDetails = () => {
             <NumberCircle content="33" />
             <NumberCircle content="59" />
           </div>
-          <div>
-            <AddToCartCard />
+          <div className="flex gap-x-3  ">
+            <AddToCartBtn />
+            <AddCartEye />
           </div>
-        </div> 
+        </div>
         <div className=" flex col-span-2 justify-center gap-x-2.5 relative top-[-50px] ">
           <FillCircle />
           <UnFillCircle />
         </div>
       </div>
-
     </div>
   );
 };

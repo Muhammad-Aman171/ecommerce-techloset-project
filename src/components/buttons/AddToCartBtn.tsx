@@ -5,19 +5,36 @@ import { addToCart } from "../../store/slices/AddToCartSlice.ts";
 import { BsCart3 } from "react-icons/bs";
 
 interface ButtonTypesProps {
-  key?: number | undefined;
-  quantity?: number;
+  id?: number; // `id` is required to ensure proper functionality
+  title?: string;
+  price?: number;
+  image?: string;
 }
-const AddToCartBtn: React.FC<ButtonTypesProps> = ({ key }) => {
+const AddToCartBtn: React.FC<ButtonTypesProps> = ({
+  id,
+  title,
+  price,
+  image,
+}) => {
   const dispatch = useDispatch<AppDispatch>();
 
   const handleAddToCart = () => {
-    if (key === undefined) {
+    if (!id) {
       console.error("Product ID is missing!");
       return;
     }
-    dispatch(addToCart({ key }));
-    console.log("Added to Cart:", { key }); // For debugging
+
+    // Dispatching product details to Redux store
+    dispatch(
+      addToCart({
+        id,
+        title,
+        price,
+        image,
+      })
+    );
+
+    console.log("Added to Cart:", { id, title, price, image });
   };
 
   return (

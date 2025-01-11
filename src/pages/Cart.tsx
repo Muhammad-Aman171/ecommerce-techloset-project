@@ -2,8 +2,15 @@ import React from "react";
 import Button from "../components/buttons/button.tsx";
 import { GoChevronDown } from "react-icons/go";
 import CartProductCard from "../components/CartProductCard.tsx";
+import { RootState } from "../store/store.ts";
+// import { cartItems } from "../store/slices/AddToCartSlice.ts";
+import { useSelector } from "react-redux";
 
 const Cart = () => {
+  const cartItems = useSelector(
+    (state: RootState) => state.addToCartSlice.items
+  );
+
   return (
     <div className="flex justify-center ">
       <div>
@@ -32,8 +39,15 @@ const Cart = () => {
               </div>
             </div>
             <div>
-              <CartProductCard />
-              <CartProductCard />
+              {cartItems.map((item: any) => (
+                <CartProductCard
+                  key={item.id}
+                  image={item.image}
+                  title={item.title}
+                  price={item.price}
+                  // quantity={item.quantity}
+                />
+              ))}
             </div>
             <div className="flex gap-x-[60px] max-xl:flex-col max-xl:gap-y-[20px] max-xl:my-[50px]  ">
               <Button

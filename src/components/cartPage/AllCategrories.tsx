@@ -13,8 +13,6 @@ const AllCategrories: React.FC = () => {
     (state: RootState) => state.productSlice.products
   );
 
-
-  
   // const allProducts = useSelector(
   //   (state: RootState) => state.productSlice.products
   // );
@@ -53,11 +51,11 @@ const AllCategrories: React.FC = () => {
                 </p>
               </div>
 
-              <CheckBoxCategroy  heading="All categories" number="10" />
-              <CheckBoxCategroy  heading="Tablet" number="5" />
-              <CheckBoxCategroy  heading="Laptop" number="5" />
-              <CheckBoxCategroy  heading="Headphones" number="5" />
-              <CheckBoxCategroy  heading="other" number="5" />
+              <CheckBoxCategroy heading="All categories" number="10" />
+              <CheckBoxCategroy heading="Tablet" number="5" />
+              <CheckBoxCategroy heading="Laptop" number="5" />
+              <CheckBoxCategroy heading="Headphones" number="5" />
+              <CheckBoxCategroy heading="other" number="5" />
 
               <hr className=" border border-[#BDBDBD] " />
             </div>
@@ -142,7 +140,7 @@ const AllCategrories: React.FC = () => {
             </div>
           </div>
           <div className="grid grid-cols-[repeat(auto-fit,minmax(308.83px,1fr))] justify-items-center  justify-center items-center gap-[26px] col-span-3 ">
-            {products.map((product) => (
+            {/* {products.map((product) => (
               <Link to={`/products/${product.id}`}>
                 <ProductCard
                   className="border border-[#B6B6B6] rounded-[20px]  w-[308.83px] h-[313.75px] py-[22.74px]  px-[13.28px] flex flex-col"
@@ -152,7 +150,8 @@ const AllCategrories: React.FC = () => {
                   image={product.image}
                 />
               </Link>
-            ))}{" "}
+            ))} */}
+            <ProductCard className="border border-[#B6B6B6] rounded-[20px]  w-[308.83px] h-[313.75px] py-[22.74px]  px-[13.28px] flex flex-col" />
           </div>
           <div className=" col-span-4 my-[20px] ">
             <LaptopSale />
