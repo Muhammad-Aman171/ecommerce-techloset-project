@@ -14,14 +14,15 @@ import FillCircle from "../slidersCircles/FillCircle.tsx";
 
 const MembersSection = () => {
   return (
-    <div className="my-20 mx-[55px] max-md:mx-[32px] max-md:my-6 ">
+    <div className=" my-20 mx-[55px] max-md:mx-[32px] max-md:my-6 ">
       <div className="  flex gap-x-2.5 my-10  max-lg:hidden ">
         <MembersCard scrImg={MembersImg1} name="Savannah Nguyen" />
         <MembersCard scrImg={MembersImg2} name="Esther Howard" />
         <MembersCard scrImg={MembersImg3} name="Esther Howard" />
       </div>
-      <div className="flex gap-x-2.5 my-10 lg:hidden w-[700px] ">
+      <div className="flex justify-center items-center gap-x-2.5 my-10 lg:hidden  max-md:max-w-[610px] max-lg:w-[700px]  ">
         <Swiper
+        
           modules={[Navigation, Pagination]} // Enable Navigation and Pagination
           spaceBetween={30} // Gap between slides
           loop={window.innerWidth < 1024} // Sirf chhoti screen par loop enable karein
@@ -38,7 +39,15 @@ const MembersSection = () => {
             <MembersCard scrImg={MembersImg2} name="Esther Howard" />
           </SwiperSlide>
           <SwiperSlide>
-            {" "}
+            <MembersCard scrImg={MembersImg3} name="Gudai Howard" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <MembersCard scrImg={MembersImg1} name="Howard savan" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <MembersCard scrImg={MembersImg2} name="Consector Howard" />
+          </SwiperSlide>
+          <SwiperSlide>
             <MembersCard scrImg={MembersImg3} name="Esther Howard" />
           </SwiperSlide>
         </Swiper>

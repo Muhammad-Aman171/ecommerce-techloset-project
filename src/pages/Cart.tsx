@@ -39,15 +39,7 @@ const Cart = () => {
               </div>
             </div>
             <div>
-              {cartItems.map((item: any) => (
-                <CartProductCard
-                  key={item.id}
-                  image={item.image}
-                  title={item.title}
-                  price={item.price}
-                  // quantity={item.quantity}
-                />
-              ))}
+                <CartProductCard />
             </div>
             <div className="flex gap-x-[60px] max-xl:flex-col max-xl:gap-y-[20px] max-xl:my-[50px]  ">
               <Button

@@ -7,7 +7,7 @@ interface MembersCardTypesProps {
 
 const MembersCard: React.FC<MembersCardTypesProps> = ({ scrImg, name }) => {
   return (
-    <div className="border border-[#BABABA] rounded-[20px] py-[16.83px] pl-[16.83px] pr-[20.56px] max-md:py-[27px] max-md:px-[19px] max-md:flex max-md:flex-col max-md:items-center max-md:gap-y-6 ">
+    <div className="border border-[#BABABA] rounded-[20px] py-[16.83px] pl-[16.83px] pr-[20.56px] max-md:py-[27px] max-md:px-[19px] max-md:flex max-md:flex-col max-md:items-center max-md:gap-y-6 max-w-[432.79px] min-w-[311px] ">
       <div className="flex items-center gap-x-[37.39px] mb-[26px] max-md:flex-col max-md:gap-y-3 ">
         <div className="  ">
           <img src={scrImg} alt="Img does not show" />

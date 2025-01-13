@@ -50,10 +50,10 @@ const ProductReview: React.FC = () => {
         }}
       >
         {limitProducts.map((limitProduct) => (
-          <SwiperSlide>
+          <SwiperSlide key={limitProduct.id}>
             <Link to={`/products/${limitProduct.id}`}>
               <div
-                className={` ${limitProduct.id} border border-borderColor grid grid-cols-2 place-items-center justify-center rounded-[20px] gap-x-[43.35px] px-[14px] h-[147px] max-w-[390px]  `}
+                className={`  border border-borderColor grid grid-cols-2 place-items-center justify-center rounded-[20px] gap-x-[43.35px] px-[14px] h-[147px] max-w-[390px]  `}
               >
                 <span className=" h-[130px] ">
                   <img
