@@ -6,6 +6,7 @@ import AddToCartBtn from "../buttons/AddToCartBtn.tsx";
 import AddCartEye from "../buttons/AddCartEye.tsx";
 import FillCircle from "../slidersCircles/FillCircle.tsx";
 import UnFillCircle from "../slidersCircles/UnFillCircle.tsx";
+import ProductDetailsCard from "../ProductDetailsCard.tsx";
 
 const ProductDetails = () => {
   return (
@@ -45,6 +46,10 @@ const ProductDetails = () => {
           <FillCircle />
           <UnFillCircle />
         </div>
+      </div>
+      <div className="flex flex-col gap-y-[23px]  ">
+        <ProductDetailsCard />
+        <ProductDetailsCard />
       </div>
     </div>
   );

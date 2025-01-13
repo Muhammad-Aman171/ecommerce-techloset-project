@@ -9,7 +9,7 @@ const HeaderSection2: React.FC = () => {
   return (
     <div className="items-center">
       <div className=" bg-[#003f62] flex justify-center ">
-        <div className=" flex justify-between basis-[1330px] items-center mx-[55px]  max-md:mx-[20px]">
+        <div className=" flex justify-between basis-[1330px] items-center mx-[55px]  max-md:mx-[10px]">
           <div className="flex items-center justify-between  m-[20px] basis-[670px]  ">
             <Link to="/">
               <div className="w-[100px] h-[28px]   ">

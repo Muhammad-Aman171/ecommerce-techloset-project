@@ -9,7 +9,7 @@ import { PiWhatsappLogo } from "react-icons/pi";
 const FooterSection: React.FC = () => {
   return (
     <div className="bg-[#E2F4FF] py-[42px] ">
-      <div className=" mx-[55px] max-md:mx-[18px] ">
+      <div className=" mx-[55px] max-md:mx-0 ">
         <div className=" bg-white mb-[41px] flex items-center justify-between gap-x-[20px] px-[20px] rounded-[20px] basis-[1330px] max-md:flex-col max-md:gap-y-3  ">
           <div className="max-md:mt-[14px]">
             <h1 className="text-[29.38px] text-textColor leading-[44.07px] font-bold text-nowrap   ">

@@ -13,7 +13,7 @@ import LatestNewsSection from "../components/homePage/LatestNewsSection.tsx";
 
 const Home: React.FC = () => {
   return (
-    <div>
+    <div className="border border-black mx-auto  max-w-[1440px]">
       <div className="font-poppins flex flex-col justify-center items-center ">
         <HeroSection />
         <ProductReviewSection />
@@ -24,6 +24,14 @@ const Home: React.FC = () => {
         <FacilitiesSection />
         <MembersSection />
         <OrganizationsSection />
+        <div className="flex items-center justify-around w-full mt-2  0 mb-2 max-md:m-6  ">
+          <h1 className="text-[25.38px] text-[#1B5A7D] leading-[38.07px] font-bold  ">
+            Latest news
+          </h1>
+          <h3 className="text-[20.38px] text-[#1B5A7D] leading-[30.57px] font-medium  ">
+            View all
+          </h3>
+        </div>
         <LatestNewsSection />
       </div>
     </div>
