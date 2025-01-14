@@ -10,7 +10,7 @@ import ProductDetailsCard from "../ProductDetailsCard.tsx";
 
 const ProductDetails = () => {
   return (
-    <div className="my-20  flex gap-x-8 justify-center  max-xl:hidden ">
+    <div className="my-20  flex items-center justify-center gap-x-8  max-xl:hidden ">
       <div className="border border-[#B6B6B6] rounded-[20px] px-[29px] grid grid-cols-2 items-center justify-start gap-x-[62px] ">
         <div className=" my-[62.5px] ">
           <img src={BigSpeakerImg} alt="Big speaker is not show" />
