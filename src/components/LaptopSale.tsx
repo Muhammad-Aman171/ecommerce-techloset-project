@@ -4,7 +4,7 @@ import BackImg from "../assets/imgs/backgroundimg.png";
 
 const LaptopSale: React.FC = () => {
   return (
-    <div className="relative flex items-center justify-center mx-[55px] max-md:mx-0 max-md:rounded-0 ">
+    <div className="relative flex items-center justify-center max-md:mx-0 max-md:rounded-0 ">
       <img
         src={BackImg}
         alt="Background img does not show"

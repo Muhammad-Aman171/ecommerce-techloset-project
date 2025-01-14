@@ -28,7 +28,7 @@ const MembersSection = () => {
         }}
       >
         <SwiperSlide>
-          <div className="border border-[#BABABA] rounded-[20px] py-[16.83px] pl-[16.83px] pr-[20.56px] mx-[30px] max-md:mx-[10px] max-md:py-[27px] max-md:px-[19px] max-md:flex max-md:flex-col max-md:items-center max-md:gap-y-6">
+          <div className="border border-[#BABABA] rounded-[20px] py-[16.83px] pl-[16.83px] pr-[20.56px]  max-md:mx-[10px] max-md:py-[27px] max-md:px-[19px] max-md:flex max-md:flex-col max-md:items-center max-md:gap-y-6">
             <div className="flex items-center gap-x-[37.39px] mb-[26px] max-md:flex-col max-md:gap-y-3 ">
               <div className="  ">
                 <img src={MembersImg1} alt="Img does not show" />
@@ -49,7 +49,7 @@ const MembersSection = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="border border-[#BABABA] rounded-[20px] py-[16.83px] pl-[16.83px] pr-[20.56px] mx-[30px] max-md:mx-[10px] max-md:py-[27px] max-md:px-[19px] max-md:flex max-md:flex-col max-md:items-center max-md:gap-y-6 ">
+          <div className="border border-[#BABABA] rounded-[20px] py-[16.83px] pl-[16.83px] pr-[20.56px] max-md:mx-[10px] max-md:py-[27px] max-md:px-[19px] max-md:flex max-md:flex-col max-md:items-center max-md:gap-y-6 ">
             <div className="flex items-center gap-x-[37.39px] mb-[26px] max-md:flex-col max-md:gap-y-3 ">
               <div className="  ">
                 <img src={MembersImg2} alt="Img does not show" />
@@ -70,7 +70,7 @@ const MembersSection = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="border border-[#BABABA] rounded-[20px] py-[16.83px] pl-[16.83px] pr-[20.56px] mx-[30px] max-md:mx-[10px] max-md:py-[27px] max-md:px-[19px] max-md:flex max-md:flex-col max-md:items-center max-md:gap-y-6  ">
+          <div className="border border-[#BABABA] rounded-[20px] py-[16.83px] pl-[16.83px] pr-[20.56px] max-md:mx-[10px] max-md:py-[27px] max-md:px-[19px] max-md:flex max-md:flex-col max-md:items-center max-md:gap-y-6  ">
             <div className="flex items-center gap-x-[37.39px] mb-[26px] max-md:flex-col max-md:gap-y-3 ">
               <div className="  ">
                 <img src={MembersImg3} alt="Img does not show" />
@@ -91,7 +91,7 @@ const MembersSection = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="border border-[#BABABA] rounded-[20px] py-[16.83px] pl-[16.83px] pr-[20.56px] mx-[30px] max-md:mx-[10px] max-md:py-[27px] max-md:px-[19px] max-md:flex max-md:flex-col max-md:items-center max-md:gap-y-6 ">
+          <div className="border border-[#BABABA] rounded-[20px] py-[16.83px] pl-[16.83px] pr-[20.56px] max-md:mx-[10px] max-md:py-[27px] max-md:px-[19px] max-md:flex max-md:flex-col max-md:items-center max-md:gap-y-6 ">
             <div className="flex items-center gap-x-[37.39px] mb-[26px] max-md:flex-col max-md:gap-y-3 ">
               <div className="  ">
                 <img src={MembersImg1} alt="Img does not show" />
@@ -112,7 +112,7 @@ const MembersSection = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="border border-[#BABABA] rounded-[20px] py-[16.83px] pl-[16.83px] pr-[20.56px] mx-[30px] max-md:max-md:py-[27px] max-md:px-[19px] max-md:flex max-md:flex-col max-md:items-center max-md:gap-y-6 ">
+          <div className="border border-[#BABABA] rounded-[20px] py-[16.83px] pl-[16.83px] pr-[20.56px] max-md:max-md:py-[27px] max-md:px-[19px] max-md:flex max-md:flex-col max-md:items-center max-md:gap-y-6 ">
             <div className="flex items-center gap-x-[37.39px] mb-[26px] max-md:flex-col max-md:gap-y-3 ">
               <div className="  ">
                 <img src={MembersImg2} alt="Img does not show" />
@@ -133,7 +133,7 @@ const MembersSection = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="border border-[#BABABA] rounded-[20px] py-[16.83px] pl-[16.83px] pr-[20.56px] mx-[30px] max-md:max-md:py-[27px] max-md:px-[19px] max-md:flex max-md:flex-col max-md:items-center max-md:gap-y-6 ">
+          <div className="border border-[#BABABA] rounded-[20px] py-[16.83px] pl-[16.83px] pr-[20.56px]  max-md:max-md:py-[27px] max-md:px-[19px] max-md:flex max-md:flex-col max-md:items-center max-md:gap-y-6 ">
             <div className="flex items-center gap-x-[37.39px] mb-[26px] max-md:flex-col max-md:gap-y-3 ">
               <div className="  ">
                 <img src={MembersImg3} alt="Img does not show" />

@@ -18,35 +18,33 @@ const PopularProducts: React.FC = () => {
   if (status === "loading") return <p>Loading...</p>;
 
   return (
-    <div>
-      <div className="flex justify-between items-center my-20 mx-8 gap-x-4 max-md:justify-center max-md:flex-col max-md:mx-auto max-md:my-10">
-        <div className="w-[250px] ">
-          <h1 className="text-[27.38px] text-textColor leading-[41.07px] font-semibold text-nowrap  ">
-            Popular products
-          </h1>
-        </div>
-        <div className="flex items-center justify-center flex-wrap gap-3 ">
-          <Button
-            label="Electronics"
-            onClick={() => handleFilter("electronics")}
-            className="text-[16.38px] font-medium leading-[24.57px] text-textColor border border-borderColor rounded-[20px] w-[139px] py-[10px]   "
-          />
-          <Button
-            label="Jewelry"
-            onClick={() => handleFilter("jewelery")}
-            className="text-[16.38px] font-medium leading-[24.57px] text-textColor border border-borderColor rounded-[20px] w-[139px] py-[10px]   "
-          />
-          <Button
-            label="Men's Clothing"
-            onClick={() => handleFilter("men's clothing")}
-            className="text-[16.38px] font-medium leading-[24.57px] text-textColor border border-borderColor rounded-[20px] w-[139px] py-[10px]   "
-          />
-          <Button
-            label="Women's Clothing"
-            onClick={() => handleFilter("women's clothing")}
-            className="text-[16.38px] font-medium leading-[24.57px] text-textColor border border-borderColor rounded-[20px] w-[139px] py-[10px]   "
-          />
-        </div>
+    <div className="flex justify-between w-full items-center mt-20 mb-[53px] gap-x-4 max-md:justify-center max-md:flex-col max-md:mx-auto max-md:my-10">
+      <div className=" ">
+        <h1 className="text-[27.38px] text-textColor leading-[41.07px] font-semibold text-nowrap  ">
+          Popular products
+        </h1>
+      </div>
+      <div className="flex items-center justify-center flex-wrap gap-3 ">
+        <Button
+          label="Electronics"
+          onClick={() => handleFilter("electronics")}
+          className="text-[16.38px] font-medium leading-[24.57px] text-textColor border border-borderColor rounded-[20px] px-[30px] py-[10px]   "
+        />
+        <Button
+          label="Jewelry"
+          onClick={() => handleFilter("jewelery")}
+          className="text-[16.38px] font-medium leading-[24.57px] text-textColor border border-borderColor rounded-[20px] px-[30px] py-[10px]   "
+        />
+        <Button
+          label="Men's Clothing"
+          onClick={() => handleFilter("men's clothing")}
+          className="text-[16.38px] font-medium leading-[24.57px] text-textColor border border-borderColor rounded-[20px] px-[30px] py-[10px]   "
+        />
+        <Button
+          label="Women's Clothing"
+          onClick={() => handleFilter("women's clothing")}
+          className="text-[16.38px] font-medium leading-[24.57px] text-textColor border border-borderColor rounded-[20px] px-[30px] py-[10px]   "
+        />
       </div>
     </div>
   );
