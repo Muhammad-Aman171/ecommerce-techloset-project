@@ -4,8 +4,6 @@ import { GoChevronDown } from "react-icons/go";
 import CartProductCard from "../components/CartProductCard.tsx";
 
 const Cart = () => {
-
-
   return (
     <div className="flex justify-center ">
       <div>
@@ -34,7 +32,7 @@ const Cart = () => {
               </div>
             </div>
             <div>
-                <CartProductCard />
+              <CartProductCard />
             </div>
             <div className="flex gap-x-[60px] max-xl:flex-col max-xl:gap-y-[20px] max-xl:my-[50px]  ">
               <Button

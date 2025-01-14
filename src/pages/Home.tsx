@@ -14,7 +14,7 @@ import LatestNewsSection from "../components/homePage/LatestNewsSection.tsx";
 const Home: React.FC = () => {
   return (
     <div className="mx-auto  max-w-[1440px]">
-      <div className="font-poppins flex flex-col justify-center  ">
+      <div className="font-poppins flex flex-col items-center ">
         <HeroSection />
         <ProductReviewSection />
         <PopularProductsBtns />
