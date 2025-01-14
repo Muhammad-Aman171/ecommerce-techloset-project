@@ -1,5 +1,4 @@
 import React from "react";
-import { GoHeart } from "react-icons/go";
 import { AiTwotoneStar } from "react-icons/ai";
 import  PlayGame  from "../assets/imgs/palyGame.png";
 

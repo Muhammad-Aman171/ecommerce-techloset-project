@@ -2,14 +2,9 @@ import React from "react";
 import Button from "../components/buttons/button.tsx";
 import { GoChevronDown } from "react-icons/go";
 import CartProductCard from "../components/CartProductCard.tsx";
-import { RootState } from "../store/store.ts";
-// import { cartItems } from "../store/slices/AddToCartSlice.ts";
-import { useSelector } from "react-redux";
 
 const Cart = () => {
-  const cartItems = useSelector(
-    (state: RootState) => state.addToCartSlice.items
-  );
+
 
   return (
     <div className="flex justify-center ">

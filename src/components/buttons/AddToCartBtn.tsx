@@ -1,7 +1,4 @@
-import React, { useState } from "react";
-import { useDispatch } from "react-redux";
-import { AppDispatch } from "../../store/store";
-import { addToCart } from "../../store/slices/AddToCartSlice.ts";
+import React from "react";
 import { BsCart3 } from "react-icons/bs";
 
 interface AddToCartBtnProps {
@@ -9,23 +6,6 @@ interface AddToCartBtnProps {
   onClick?: (id: number) => void; // Function to handle click
 }
 const AddToCartBtn: React.FC<AddToCartBtnProps> = ({ id, onClick }) => {
-  const dispatch = useDispatch<AppDispatch>();
-
-  const handleAddToCart = () => {
-    // if (!id) {
-    //   console.error("Product ID is missing!");
-    //   return;
-    // }
-
-    // Dispatching product details to Redux store
-    // dispatch(
-    //   addToCart({
-    //     id,
-    //   })
-    // );
-
-    console.log("Added to Cart:", { id });
-  };
 
   return (
     <button

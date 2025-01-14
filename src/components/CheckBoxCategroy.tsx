@@ -1,8 +1,4 @@
-import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { AppDispatch } from "../store/store.ts";
-import updateSelectedCategories from "../store/slices/FilterCategoriesSlice.ts";
-import { RootState } from "../store/store.ts";
+import React from "react";
 
 interface CheckBoxCategroyTypesProps {
   heading?: string;
@@ -15,23 +11,7 @@ const CheckBoxCategroy: React.FC<CheckBoxCategroyTypesProps> = ({
   number,
   value,
 }) => {
-  const dispatch = useDispatch<AppDispatch>();
-  const allProducts = useSelector(
-    (state: RootState) => state.productSlice.products
-  );
-  // const filteredProducts = useSelector(filteredProducts);
 
-  // useEffect(() => {
-  //   dispatch(fetchProducts());
-  // }, [dispatch]);
-
-  // const handleCheckboxChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-  //   const category = e.target.value;
-  //   const isChecked = e.target.checked;
-
-  //   dispatch(updateSelectedCategories({ category, isChecked }));
-  //   dispatch(filterByCategory({ products: allProducts }));
-  // };
   return (
     <div className="flex justify-between  ">
       <span className="flex gap-x-[10px] ">
