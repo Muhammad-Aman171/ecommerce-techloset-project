@@ -6,7 +6,6 @@ interface AddToCartBtnProps {
   onClick?: (id: number) => void; // Function to handle click
 }
 const AddToCartBtn: React.FC<AddToCartBtnProps> = ({ id, onClick }) => {
-
   return (
     <button
       onClick={() => {
