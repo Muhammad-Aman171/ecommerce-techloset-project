@@ -21,10 +21,12 @@ const addToCartSlice = createSlice({
       const existingItem = state.items.find(
         (item) => item.id === action.payload.id
       );
-      if (!existingItem) {
+      if (existingItem) {
         state.items.push(action.payload);
+        console.log("Item added to the cart", existingItem);
       } else {
-        console.log("Item is already in the cart");
+        state.items.push({ ...action.payload });
+        console.log("Item is already in the cart", existingItem);
       }
     },
     // Remove item from cart
