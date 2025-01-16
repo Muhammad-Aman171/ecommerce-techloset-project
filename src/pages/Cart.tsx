@@ -5,6 +5,7 @@ import CartProductCard from "../components/CartProductCard.tsx";
 import { clearCart } from "../store/slices/AddToCartSlice.ts";
 import { useDispatch } from "react-redux";
 import { AppDispatch } from "../store/store.ts";
+import { Link } from "react-router-dom";
 
 const Cart = () => {
   const dispatch = useDispatch<AppDispatch>();
@@ -45,10 +46,12 @@ const Cart = () => {
               <CartProductCard />
             </div>
             <div className="flex gap-x-[60px] max-xl:flex-col max-xl:gap-y-[20px] max-xl:my-[50px]  ">
-              <Button
-                content="Continue shopping"
-                className="text-white py-[19.5px] px-[37px] bg-[#EDA415] rounded-[32.42px] text-[22.7px] leading-[34.05px] font-semibold text-nowrap max-xl:w-full max-xl:px-3 "
-              />
+             <Link to="/">
+                <Button
+                  content="Continue shopping"
+                  className="text-white py-[19.5px] px-[37px] bg-[#EDA415] rounded-[32.42px] text-[22.7px] leading-[34.05px] font-semibold text-nowrap max-xl:w-full max-xl:px-3 "
+                />
+             </Link>
               <Button
                 content="Update cart"
                 className="border border-[#A9A9A9] rounded-[32.42px] py-[19.5px] px-[42px] text-[22.7px] leading-[34.05px] text-[#797979] font-semibold text-nowrap max-xl:w-full max-xl:px-3 "

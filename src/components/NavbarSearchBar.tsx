@@ -4,8 +4,15 @@ import { AiOutlineUser } from "react-icons/ai";
 import { GoHeart } from "react-icons/go";
 import { BsCart3 } from "react-icons/bs";
 import Logo from "../assets/imgs/logo 1.png";
+import { useSelector } from "react-redux";
+// import { Roo } from "@reduxjs/toolkit/query";
+import { RootState } from "../store/store";
 
 const HeaderSection2: React.FC = () => {
+  const cartItems = useSelector(
+    (state: RootState) => state.addToCartSlice.items
+  );
+
   return (
     <div className="items-center">
       <div className=" bg-[#003f62] flex justify-center ">
@@ -41,10 +48,9 @@ const HeaderSection2: React.FC = () => {
             </span>
             <Link to="/Cart">
               <span className="flex items-center justify-between gap-x-3 m-4 max-md:gap-x-1 max-md:m-2 ">
-                {" "}
                 <BsCart3 className="w-6 h-6 text-white" />
                 <span className="flex items-center justify-center text-[9px] bg-[#EDA415] w-[14px] h-[15px] rounded-full ">
-                  0
+                  {cartItems.length}
                 </span>
                 <p className="max-md:hidden  ">Cart</p>
               </span>

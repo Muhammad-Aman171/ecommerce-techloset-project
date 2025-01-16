@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { RootState, AppDispatch } from "../store/store";
 import { useDispatch, useSelector } from "react-redux";
-import { removeFromCart, clearCart } from "../store/slices/AddToCartSlice.ts";
+import { removeFromCart } from "../store/slices/AddToCartSlice.ts";
 
 const CartProductCard: React.FC = () => {
   const [count, setCount] = useState(0);
@@ -33,7 +33,6 @@ const CartProductCard: React.FC = () => {
     dispatch(removeFromCart(id)); // Dispatch the remove action with the product ID
     console.log(`Removed product with ID: ${id}`);
   };
-
 
   if (cartProducts.length === 0) {
     return <p>Your cart is empty.</p>;
