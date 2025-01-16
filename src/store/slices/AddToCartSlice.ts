@@ -28,14 +28,14 @@ const addToCartSlice = createSlice({
         console.log("Item is already in the cart:", existingItem.id);
       }
     },
-    // // Remove item from cart
-    // removeFromCart: (state, action: PayloadAction<number>) => {
-    //   state.items = state.items.filter((item) => item.id !== action.payload);
-    // },
-    // // Clear entire cart
-    // clearCart: (state) => {
-    //   state.items = [];
-    // },
+    // Remove item from cart
+    removeFromCart: (state, action: PayloadAction<number>) => {
+      state.items = state.items.filter((item) => item.id !== action.payload);
+    },
+    // Clear entire cart
+    clearCart: (state) => {
+      state.items = [];
+    },
   },
 });
 
