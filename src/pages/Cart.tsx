@@ -33,13 +33,6 @@ const Cart = () => {
               </div>
             </div>
             <div>
-              {/* {cartItems.length > 0 ? (
-                cartItems.map((item) => <CartProductCard key={item.id} />)
-              ) : (
-                <p className="text-center py-4 text-gray-600">
-                  Your cart is empty.
-                </p>
-              )} */}
               <CartProductCard />
             </div>
             <div className="flex gap-x-[60px] max-xl:flex-col max-xl:gap-y-[20px] max-xl:my-[50px]  ">

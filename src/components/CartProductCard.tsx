@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-// import { AppDispatch } from "../store/store";
-import { RootState } from "../store/store";
-import { useSelector } from "react-redux";
+import { RootState, AppDispatch } from "../store/store";
+import { useDispatch, useSelector } from "react-redux";
+import { removeFromCart, clearCart } from "../store/slices/AddToCartSlice.ts";
 
 const CartProductCard: React.FC = () => {
   const [count, setCount] = useState(0);
+  const dispatch = useDispatch<AppDispatch>();
 
   const cartItems = useSelector(
     (state: RootState) => state.addToCartSlice.items
@@ -21,17 +22,22 @@ const CartProductCard: React.FC = () => {
 
   // Cart items ke products ko map karna
   const cartProducts = cartItems
-    .map((cartItem: { id: any;}) =>
-      products.find((product: any) => product.id === cartItem.id)
+    .map((cartItem: { id }) =>
+      products.find((product) => product.id === cartItem.id)
     )
     .filter((product) => product !== undefined); // Undefined products ko hatao
 
   console.log("Cart Products to Display:", cartProducts);
 
+  const handleRemove = (id: number) => {
+    dispatch(removeFromCart(id)); // Dispatch the remove action with the product ID
+    console.log(`Removed product with ID: ${id}`);
+  };
+
+
   if (cartProducts.length === 0) {
     return <p>Your cart is empty.</p>;
   }
-
   return (
     <div>
       {cartProducts.map((product) => (
@@ -76,12 +82,11 @@ const CartProductCard: React.FC = () => {
           </div>
           <div>
             <h3 className="text-[22.68px] leading-[34.02px] text-[#2F2F2F] ">
-              <button>Remove</button>
+              <button onClick={() => handleRemove(product.id)}>Remove</button>
             </h3>
           </div>
         </div>
       ))}
-      <hr className="border border-[#C3C3C3] my-5 " />
     </div>
   );
 };
