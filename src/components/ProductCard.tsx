@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-// import AddToCartBtns from "./buttons/AddToCartBtns.tsx";
 import AddCartEye from "./buttons/AddCartEye.tsx";
 import AddToCartBtn from "./buttons/AddToCartBtn.tsx";
 import { AiTwotoneStar } from "react-icons/ai";
@@ -24,11 +23,6 @@ interface ProductCardTypesProps {
 const ProductCard: React.FC<ProductCardTypesProps> = ({
   className,
   heartStyle,
-  // id,
-  // title,
-  // price,
-  // image,
-  // onClick,
 }) => {
   const dispatch = useDispatch<AppDispatch>();
   const filteredProducts = useSelector(selectFilteredProducts);
@@ -52,9 +46,9 @@ const ProductCard: React.FC<ProductCardTypesProps> = ({
     return <p>Error: {error}</p>;
   }
 
-  const handleAddToCart = (id) => {
+  const handleAddToCart = (id: number) => {
     console.log("Product ID:", id);
-    dispatch(addToCart(id));
+    dispatch(addToCart({ id }));
   };
 
   const displayProduct =

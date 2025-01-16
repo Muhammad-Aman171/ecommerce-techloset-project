@@ -33,7 +33,7 @@ const Cart = () => {
               </div>
               <div>
                 <h3 className="text-[20.68px] text-[#232323] leading-[31.02px] font-medium ">
-                  Subtotal
+                  Remove
                 </h3>
               </div>
             </div>

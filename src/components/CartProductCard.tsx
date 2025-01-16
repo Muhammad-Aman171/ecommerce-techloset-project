@@ -1,13 +1,7 @@
 import React, { useState } from "react";
 // import { AppDispatch } from "../store/store";
 import { RootState } from "../store/store";
-
-// import GamePlayImg1 from "../assets/imgs/gameplaysmallimg.png";
 import { useSelector } from "react-redux";
-
-// interface CartProductCardTypesProps {
-//   id?: number;
-// }
 
 const CartProductCard: React.FC = () => {
   const [count, setCount] = useState(0);
@@ -69,7 +63,7 @@ const CartProductCard: React.FC = () => {
         </div>
         <div>
           <h3 className="text-[22.68px] leading-[34.02px] text-[#2F2F2F] ">
-            ${product.price}
+            <button>Remove</button>
           </h3>
         </div>
       </div>
