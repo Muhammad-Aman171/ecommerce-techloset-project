@@ -2,8 +2,17 @@ import React from "react";
 import Button from "../components/buttons/button.tsx";
 import { GoChevronDown } from "react-icons/go";
 import CartProductCard from "../components/CartProductCard.tsx";
+import { clearCart } from "../store/slices/AddToCartSlice.ts";
+import { useDispatch } from "react-redux";
+import { AppDispatch } from "../store/store.ts";
 
 const Cart = () => {
+  const dispatch = useDispatch<AppDispatch>();
+
+  const handleClearCart = () => {
+    dispatch(clearCart()); // Dispatch the clear action to clear the cart
+    console.log("Cart cleared");
+  };
 
   return (
     <div className="flex justify-center ">
@@ -45,6 +54,7 @@ const Cart = () => {
                 className="border border-[#A9A9A9] rounded-[32.42px] py-[19.5px] px-[42px] text-[22.7px] leading-[34.05px] text-[#797979] font-semibold text-nowrap max-xl:w-full max-xl:px-3 "
               />
               <Button
+                onClick={handleClearCart}
                 content="Clear cart"
                 className="border border-[#C33131] rounded-[32.42px] py-[19.5px] px-[54px] text-[22.7px] text-[#C33131] leading-[34.05px] font-semibold text-nowrap max-xl:w-full max-xl:px-3 "
               />
