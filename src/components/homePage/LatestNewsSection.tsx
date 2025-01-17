@@ -10,7 +10,7 @@ import LatestProductImg2 from "../../assets/imgs/latestProductimg2.png";
 
 const LatestNewsSection = () => {
   return (
-    <div className="flex items-center gap-x-[20px] mb-[100px] mt-[50px]  w-full">
+    <div className="flex items-center gap-x-[20px]  w-full">
       <Swiper        
         modules={[Navigation, Pagination]} // Enable Navigation and Pagination
         spaceBetween={30} // Gap between slides

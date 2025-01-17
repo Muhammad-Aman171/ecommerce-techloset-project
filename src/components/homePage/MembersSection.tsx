@@ -14,7 +14,7 @@ import MembersImg3 from "../../assets/imgs/organizersimg3.png";
 
 const MembersSection = () => {
   return (
-    <div className="flex justify-center items-center w-full my-[55px] mx-[55px] ">
+    <div className="flex justify-center items-center w-full mt-[55px] mx-[55px] ">
       <Swiper
       className="flex justify-center mx-[55px] "
         modules={[Navigation, Pagination]}

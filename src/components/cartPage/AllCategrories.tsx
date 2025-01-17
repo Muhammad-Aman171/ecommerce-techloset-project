@@ -7,9 +7,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, RootState } from "../../store/store.ts";
 const AllCategrories: React.FC = () => {
   const dispatch = useDispatch<AppDispatch>();
-  // const products = useSelector(
-  //   (state: RootState) => state.productSlice.products
-  // );
 
   const status = useSelector((state: RootState) => state.productSlice.status);
   const error = useSelector((state: RootState) => state.productSlice.error);
@@ -130,18 +127,7 @@ const AllCategrories: React.FC = () => {
               <hr className=" border border-[#BDBDBD] " />
             </div>
           </div>
-          <div className="grid grid-cols-[repeat(auto-fit,minmax(308.83px,1fr))] justify-items-center  justify-center items-center gap-[26px] col-span-3 ">
-            {/* {products.map((product) => (
-              <Link to={`/products/${product.id}`}>
-                <ProductCard
-                  className="border border-[#B6B6B6] rounded-[20px]  w-[308.83px] h-[313.75px] py-[22.74px]  px-[13.28px] flex flex-col"
-                  key={product.id}
-                  title={product.title}
-                  price={product.price}
-                  image={product.image}
-                />
-              </Link>
-            ))} */}
+          <div className="grid grid-cols-[repeat(auto-fit,minmax(308.83px,1fr))] justify-items-center  justify-center items-center gap-[26px] col-span-3 mt-[50px] max-md:mt-[20px] ">
             <ProductCard className="border border-[#B6B6B6] rounded-[20px]  w-[308.83px] h-[313.75px] py-[22.74px]  px-[13.28px] flex flex-col" />
           </div>
           <div className=" col-span-4 my-[20px] ">

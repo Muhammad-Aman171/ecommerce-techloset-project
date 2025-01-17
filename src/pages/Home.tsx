@@ -9,6 +9,8 @@ import FacilitiesSection from "../components/homePage/FacilitiesSection.tsx";
 import MembersSection from "../components/homePage/MembersSection.tsx";
 import OrganizationsSection from "../components/homePage/OrganizationsSection.tsx";
 import LatestNewsSection from "../components/homePage/LatestNewsSection.tsx";
+import UnFillCircle from "../components/slidersCircles/UnFillCircle.tsx";
+import FillCircle from "../components/slidersCircles/FillCircle.tsx";
 // import FilterCategories from "../components/FilterCategories.tsx";
 
 const Home: React.FC = () => {
@@ -19,12 +21,23 @@ const Home: React.FC = () => {
         <ProductReviewSection />
         <PopularProductsBtns />
         <PopularProductsCards />
+        <div className="flex items-center gap-x-2.5 my-[50px] ">
+          <FillCircle />
+          <UnFillCircle />
+          <UnFillCircle />
+        </div>
+
         <LaptopSale />
         <ProductDetails />
         <FacilitiesSection />
         <MembersSection />
+        <div className="flex items-center gap-x-2.5 my-[50px] ">
+          <FillCircle />
+          <UnFillCircle />
+          <UnFillCircle />
+        </div>
         <OrganizationsSection />
-        <div className="flex items-center w-full justify-between mt-2  0 mb-2 max-md:m-6  ">
+        <div className="flex items-center justify-between w-full m-6 max-md:justify-around ">
           <h1 className="text-[25.38px] text-[#1B5A7D] leading-[38.07px] font-bold  ">
             Latest news
           </h1>
@@ -33,6 +46,10 @@ const Home: React.FC = () => {
           </h3>
         </div>
         <LatestNewsSection />
+        <div className="flex items-center gap-x-2.5 my-[50px] ">
+          <FillCircle />
+          <UnFillCircle />
+        </div>
       </div>
     </div>
   );

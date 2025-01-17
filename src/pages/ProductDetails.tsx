@@ -29,11 +29,11 @@ const ProductDetails: React.FC = () => {
       <div className="flex flex-col items-center justify-center gap-x-[49px] m-[30px] max-md:mx-[20px] ">
         <div className="flex items-center justify-center gap-x-[49px] max-xl:flex-col  ">
           <div className=" flex flex-col items-center gap-y-[25px] ">
-            <div className=" max-sm:w-[300px] ">
+            <div className=" max-sm:w-[300px] max-xl:mb-[50px] ">
               <img
                 src={product.image}
                 alt="play game img does not show"
-                className="w-[630px] h-[500px] max-sm:h-[300px]  "
+                className="w-[630px] h-[500px] max-lg:w-[400px] max-sm:h-[300px]  "
               />
             </div>
           </div>

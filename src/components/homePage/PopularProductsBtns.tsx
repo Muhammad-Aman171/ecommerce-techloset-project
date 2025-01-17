@@ -28,22 +28,22 @@ const PopularProducts: React.FC = () => {
         <Button
           label="Electronics"
           onClick={() => handleFilter("electronics")}
-          className="text-[16.38px] font-medium leading-[24.57px] text-textColor border border-borderColor rounded-[20px] px-[30px] py-[10px]   "
+          className="text-[16.38px] font-medium leading-[24.57px] text-textColor border border-borderColor rounded-[20px] px-[30px] py-[10px] hover:bg-[#1B5A7D] hover:text-white   "
         />
         <Button
           label="Jewelry"
           onClick={() => handleFilter("jewelery")}
-          className="text-[16.38px] font-medium leading-[24.57px] text-textColor border border-borderColor rounded-[20px] px-[30px] py-[10px]   "
+          className="text-[16.38px] font-medium leading-[24.57px] text-textColor border border-borderColor rounded-[20px] px-[30px] py-[10px] hover:bg-[#1B5A7D] hover:text-white   "
         />
         <Button
           label="Men's Clothing"
           onClick={() => handleFilter("men's clothing")}
-          className="text-[16.38px] font-medium leading-[24.57px] text-textColor border border-borderColor rounded-[20px] px-[30px] py-[10px]   "
+          className="text-[16.38px] font-medium leading-[24.57px] text-textColor border border-borderColor rounded-[20px] px-[30px] py-[10px] hover:bg-[#1B5A7D] hover:text-white  "
         />
         <Button
           label="Women's Clothing"
           onClick={() => handleFilter("women's clothing")}
-          className="text-[16.38px] font-medium leading-[24.57px] text-textColor border border-borderColor rounded-[20px] px-[30px] py-[10px]   "
+          className="text-[16.38px] font-medium leading-[24.57px] text-textColor border border-borderColor rounded-[20px] px-[30px] py-[10px] hover:bg-[#1B5A7D] hover:text-white  "
         />
       </div>
     </div>
