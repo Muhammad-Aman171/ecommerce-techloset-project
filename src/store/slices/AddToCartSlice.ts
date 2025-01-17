@@ -23,9 +23,9 @@ const addToCartSlice = createSlice({
 
       if (!existingItem) {
         state.items.push(action.payload);
-        console.log("Item added to the cart:", state.items);
+        // console.log("Item added to the cart:", state.items);
       } else {
-        console.log("Item is already in the cart:", existingItem.id);
+        alert("Item is already in the cart:");
       }
     },
     // Remove item from cart
