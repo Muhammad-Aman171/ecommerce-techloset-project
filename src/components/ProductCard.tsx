@@ -9,6 +9,8 @@ import { addToCart } from "../store/slices/AddToCartSlice.ts";
 import { selectFilteredProducts } from "../store/slices/FilterCategoriesSlice.ts";
 import { fetchProducts } from "../store/slices/ProductsSlice.ts";
 import { Link } from "react-router-dom";
+import useAppDispatch from "../hooks/useAppDispatch.tsx";
+import useAppSelector from "../hooks/useAppSelector.tsx";
 
 interface ProductCardTypesProps {
   className?: string;
@@ -24,13 +26,11 @@ const ProductCard: React.FC<ProductCardTypesProps> = ({
   className,
   heartStyle,
 }) => {
-  const dispatch = useDispatch<AppDispatch>();
-  const filteredProducts = useSelector(selectFilteredProducts);
-  const products = useSelector(
-    (state: RootState) => state.productSlice.products
-  );
-  const status = useSelector((state: RootState) => state.productSlice.status);
-  const error = useSelector((state: RootState) => state.productSlice.error);
+  const dispatch = useAppDispatch();
+  const filteredProducts = useAppSelector(selectFilteredProducts);
+  const products = useAppSelector((state) => state.productSlice.products);
+  const status = useAppSelector((state) => state.productSlice.status);
+  const error = useAppSelector((state) => state.productSlice.error);
 
   useEffect(() => {
     if (status === "idle") {

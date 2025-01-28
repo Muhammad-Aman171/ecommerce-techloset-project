@@ -3,13 +3,14 @@ import CheckBoxCategroy from "../CheckBoxCategroy.tsx";
 import ProductCard from "../ProductCard.tsx";
 import LaptopSale from "../LaptopSale.tsx";
 import { fetchProducts } from "../../store/slices/ProductsSlice.ts";
-import { useDispatch, useSelector } from "react-redux";
-import { AppDispatch, RootState } from "../../store/store.ts";
-const AllCategrories: React.FC = () => {
-  const dispatch = useDispatch<AppDispatch>();
+import useAppDispatch from "../../hooks/useAppDispatch.tsx";
+import useAppSelector from "../../hooks/useAppSelector.tsx";
 
-  const status = useSelector((state: RootState) => state.productSlice.status);
-  const error = useSelector((state: RootState) => state.productSlice.error);
+const AllCategrories: React.FC = () => {
+  const dispatch = useAppDispatch();
+
+  const status = useAppSelector((state) => state.productSlice.status);
+  const error = useAppSelector((state) => state.productSlice.error);
 
   useEffect(() => {
     if (status === "idle") {

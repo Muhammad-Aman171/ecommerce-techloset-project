@@ -6,17 +6,14 @@ import { TbBrandGoogle } from "react-icons/tb";
 import { RiFacebookCircleLine } from "react-icons/ri";
 import { PiWhatsappLogo } from "react-icons/pi";
 import { GoCheck } from "react-icons/go";
-import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-import { RootState } from "../store/store.ts";
+import useAppSelector from "../hooks/useAppSelector.tsx";
 
 const ProductDetails: React.FC = () => {
   const [count, setCount] = useState(0);
 
   const { id } = useParams();
-  const allProducts = useSelector(
-    (state: RootState) => state.productSlice.products
-  );
+  const allProducts = useAppSelector((state) => state.productSlice.products);
 
   const product = allProducts.find((product) => product.id === Number(id));
 

@@ -3,13 +3,13 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { filterByCategory } from "../../store/slices/FilterCategoriesSlice.ts";
 import { RootState, AppDispatch } from "../../store/store.ts";
+import useAppDispatch from "../../hooks/useAppDispatch.tsx";
+import useAppSelector from "../../hooks/useAppSelector.tsx";
 
 const PopularProducts: React.FC = () => {
-  const dispatch = useDispatch<AppDispatch>();
-  const allProducts = useSelector(
-    (state: RootState) => state.productSlice.products
-  );
-  const status = useSelector((state: RootState) => state.productSlice.status);
+  const dispatch = useAppDispatch();
+  const allProducts = useAppSelector((state) => state.productSlice.products);
+  const status = useAppSelector((state) => state.productSlice.status);
 
   const handleFilter = (category: string) => {
     dispatch(filterByCategory({ category, products: allProducts }));

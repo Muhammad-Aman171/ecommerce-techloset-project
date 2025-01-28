@@ -1,5 +1,5 @@
 import React from "react";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router";
 import "./App.css";
 import Home from "./pages/Home.tsx";
 import NavbarContact from "./components/NavbarContact.tsx";
@@ -63,7 +63,7 @@ function App() {
     },
   ]);
   return (
-    <div className="App">
+    <div>
       <RouterProvider router={router} />
     </div>
   );
