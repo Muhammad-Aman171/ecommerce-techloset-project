@@ -1,27 +1,24 @@
 import React, { useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css"; // Core Swiper CSS
-import "swiper/css/pagination"; // Pagination CSS
-import "swiper/css/navigation"; // Navigation CSS
+import "swiper/css";
+import "swiper/css/pagination"; 
+import "swiper/css/navigation"; 
 import { Navigation } from "swiper/modules";
 import { Pagination } from "swiper/modules";
-// import ProductReviewSmallCard from "../ProductReviewSmallCard.tsx";
 import { fetchProductInLimits } from "../../store/slices/LimitProductsSlice.ts";
-import { AppDispatch, RootState } from "../../store/store";
-import { useDispatch, useSelector } from "react-redux";
+import {
+  useAppDispatch,
+  useAppSelector,
+} from "../../hooks/useAppSelectorAndUseAppDispatch.tsx";
 import { Link } from "react-router-dom";
 
 const ProductReview: React.FC = () => {
-  const dispatch = useDispatch<AppDispatch>();
-  const limitProducts = useSelector(
-    (state: RootState) => state.limitProductSlice.products
+  const dispatch = useAppDispatch();
+  const limitProducts = useAppSelector(
+    (state) => state.limitProductSlice.products
   );
-  const status = useSelector(
-    (state: RootState) => state.limitProductSlice.status
-  );
-  const error = useSelector(
-    (state: RootState) => state.limitProductSlice.error
-  );
+  const status = useAppSelector((state) => state.limitProductSlice.status);
+  const error = useAppSelector((state) => state.limitProductSlice.error);
 
   useEffect(() => {
     if (status === "idle") {

@@ -4,14 +4,10 @@ import { AiOutlineUser } from "react-icons/ai";
 import { GoHeart } from "react-icons/go";
 import { BsCart3 } from "react-icons/bs";
 import Logo from "../assets/imgs/logo 1.png";
-import { useSelector } from "react-redux";
-// import { Roo } from "@reduxjs/toolkit/query";
-import { RootState } from "../store/store";
+import { useAppSelector } from "../hooks/useAppSelectorAndUseAppDispatch.tsx";
 
-const HeaderSection2: React.FC = () => {
-  const cartItems = useSelector(
-    (state: RootState) => state.addToCartSlice.items
-  );
+const NavbarSearchBar: React.FC = () => {
+  const cartItems = useAppSelector((state) => state.addToCartSlice.items);
 
   return (
     <div className="items-center">
@@ -62,4 +58,4 @@ const HeaderSection2: React.FC = () => {
   );
 };
 
-export default HeaderSection2;
+export default NavbarSearchBar;

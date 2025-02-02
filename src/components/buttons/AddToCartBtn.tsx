@@ -2,15 +2,15 @@ import React from "react";
 import { BsCart3 } from "react-icons/bs";
 
 interface AddToCartBtnProps {
-  id?: number; // Product ID
-  onClick?: (id: number) => void; // Function to handle click
+  id?: number; 
+  onClick?: (id: number) => void;
 }
 const AddToCartBtn: React.FC<AddToCartBtnProps> = ({ id, onClick }) => {
   return (
     <button
       onClick={() => {
         if (onClick) {
-          onClick(id!); // Here, we assert that id is not undefined
+          onClick(id!); 
         } else {
           console.error("onClick function is not defined!");
         }

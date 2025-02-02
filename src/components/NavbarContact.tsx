@@ -2,7 +2,7 @@ import React from "react";
 import { CiLocationOn } from "react-icons/ci";
 import { CiDeliveryTruck } from "react-icons/ci";
 
-const HeaderSection1: React.FC = () => {
+const NavbarContact: React.FC = () => {
   return (
     <div>
       <div className=" font-poppins  flex justify-center ">
@@ -36,4 +36,4 @@ const HeaderSection1: React.FC = () => {
   );
 };
 
-export default HeaderSection1;
+export default NavbarContact;

@@ -3,14 +3,14 @@ import AddCartEye from "./buttons/AddCartEye.tsx";
 import AddToCartBtn from "./buttons/AddToCartBtn.tsx";
 import { AiTwotoneStar } from "react-icons/ai";
 import { GoHeart } from "react-icons/go";
-import { useDispatch, useSelector } from "react-redux";
-import { AppDispatch, RootState } from "../store/store.ts";
 import { addToCart } from "../store/slices/AddToCartSlice.ts";
 import { selectFilteredProducts } from "../store/slices/FilterCategoriesSlice.ts";
 import { fetchProducts } from "../store/slices/ProductsSlice.ts";
 import { Link } from "react-router-dom";
-import useAppDispatch from "../hooks/useAppDispatch.tsx";
-import useAppSelector from "../hooks/useAppSelector.tsx";
+import {
+  useAppDispatch,
+  useAppSelector,
+} from "../hooks/useAppSelectorAndUseAppDispatch.tsx";
 
 interface ProductCardTypesProps {
   className?: string;

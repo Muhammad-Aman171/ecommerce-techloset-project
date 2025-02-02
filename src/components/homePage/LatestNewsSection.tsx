@@ -1,6 +1,6 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css"; // Core Swiper CSS
+import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
@@ -12,9 +12,9 @@ const LatestNewsSection = () => {
   return (
     <div className="flex items-center gap-x-[20px]  w-full">
       <Swiper        
-        modules={[Navigation, Pagination]} // Enable Navigation and Pagination
-        spaceBetween={30} // Gap between slides
-        loop={window.innerWidth < 2000} // Sirf chhoti screen par loop enable karein
+        modules={[Navigation, Pagination]} 
+        spaceBetween={30} 
+        loop={window.innerWidth < 2000}
         slidesPerView={window.innerWidth < 1024 ? 1 : 2}
       >
         <SwiperSlide>

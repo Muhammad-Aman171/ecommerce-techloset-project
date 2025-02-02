@@ -2,8 +2,10 @@ import React from "react";
 import { removeFromCart } from "../store/slices/AddToCartSlice.ts";
 import QuantityBtn from "./QuantityBtn.tsx";
 import { RxCrossCircled } from "react-icons/rx";
-import useAppDispatch from "../hooks/useAppDispatch.tsx";
-import useAppSelector from "../hooks/useAppSelector.tsx";
+import {
+  useAppDispatch,
+  useAppSelector,
+} from "../hooks/useAppSelectorAndUseAppDispatch.tsx";
 
 const CartProductCard: React.FC = () => {
   const dispatch = useAppDispatch();

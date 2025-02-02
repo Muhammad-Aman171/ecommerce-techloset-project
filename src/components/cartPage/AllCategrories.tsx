@@ -3,12 +3,13 @@ import CheckBoxCategroy from "../CheckBoxCategroy.tsx";
 import ProductCard from "../ProductCard.tsx";
 import LaptopSale from "../LaptopSale.tsx";
 import { fetchProducts } from "../../store/slices/ProductsSlice.ts";
-import useAppDispatch from "../../hooks/useAppDispatch.tsx";
-import useAppSelector from "../../hooks/useAppSelector.tsx";
+import {
+  useAppDispatch,
+  useAppSelector,
+} from "../../hooks/useAppSelectorAndUseAppDispatch.tsx";
 
 const AllCategrories: React.FC = () => {
   const dispatch = useAppDispatch();
-
   const status = useAppSelector((state) => state.productSlice.status);
   const error = useAppSelector((state) => state.productSlice.error);
 

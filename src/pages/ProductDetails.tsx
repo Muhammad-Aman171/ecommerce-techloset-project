@@ -7,7 +7,7 @@ import { RiFacebookCircleLine } from "react-icons/ri";
 import { PiWhatsappLogo } from "react-icons/pi";
 import { GoCheck } from "react-icons/go";
 import { useParams } from "react-router-dom";
-import useAppSelector from "../hooks/useAppSelector.tsx";
+import { useAppSelector } from "../hooks/useAppSelectorAndUseAppDispatch.tsx";
 
 const ProductDetails: React.FC = () => {
   const [count, setCount] = useState(0);
@@ -193,18 +193,6 @@ const ProductDetails: React.FC = () => {
             className="bg-[#003F62] w-[196px] h-[40px] text-[19.68px] leading-[29.52px] text-white underline  "
           />
         </div>
-
-        {/* <div className="flex flex-col justify-center items-center gap-y-[53px] my-[75px] w-full ">
-          <h1 className="text-[#1B5A7D] text-[27.38px] leading-[41.07px] font-semibold text-start ">
-            Related product
-          </h1>
-          <div className="grid grid-cols-[repeat(auto-fit,minmax(308.83px,1fr))] justify-items-center w-full gap-[26.56px] ">
-            <ProductCard className="border border-[#B6B6B6] rounded-[20px]  w-[308.83px] h-[313.75px] py-[22.74px]  px-[13.28px] flex flex-col" />
-            <ProductCard className="border border-[#B6B6B6] rounded-[20px]  w-[308.83px] h-[313.75px] py-[22.74px]  px-[13.28px] flex flex-col" />
-            <ProductCard className="border border-[#B6B6B6] rounded-[20px]  w-[308.83px] h-[313.75px] py-[22.74px]  px-[13.28px] flex flex-col" />
-            <ProductCard className="border border-[#B6B6B6] rounded-[20px]  w-[308.83px] h-[313.75px] py-[22.74px]  px-[13.28px] flex flex-col" />
-          </div>
-        </div> */}
       </div>
     </div>
   );

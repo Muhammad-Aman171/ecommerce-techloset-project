@@ -11,7 +11,6 @@ import OrganizationsSection from "../components/homePage/OrganizationsSection.ts
 import LatestNewsSection from "../components/homePage/LatestNewsSection.tsx";
 import UnFillCircle from "../components/slidersCircles/UnFillCircle.tsx";
 import FillCircle from "../components/slidersCircles/FillCircle.tsx";
-// import FilterCategories from "../components/FilterCategories.tsx";
 
 const Home: React.FC = () => {
   return (

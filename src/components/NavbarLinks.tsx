@@ -2,7 +2,7 @@ import React from "react";
 import { IoIosArrowDown } from "react-icons/io";
 import { Link } from "react-router-dom";
 
-const HeaderSection3 = () => {
+const NavbarLinks = () => {
   return (
     <div>
       <div className="bg-[#F4F4F4] flex justify-center ">
@@ -63,4 +63,4 @@ const HeaderSection3 = () => {
   );
 };
 
-export default HeaderSection3;
+export default NavbarLinks;

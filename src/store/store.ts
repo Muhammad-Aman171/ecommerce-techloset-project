@@ -4,9 +4,6 @@ import productReducer from "./slices/ProductsSlice.ts";
 import limitProductsReducer from "./slices/LimitProductsSlice.ts";
 import filterSliceReducer from "./slices/FilterCategoriesSlice.ts";
 import addToCartReducer from "./slices/AddToCartSlice.ts";
-// import fetchProductsByCategoryReducer from "./slices/FetchProductsByCategoriesSlice.ts";
-
-// import postsReducer from "./slices/PractiseSlice.ts";
 
 export const store = configureStore({
   reducer: {
@@ -14,8 +11,6 @@ export const store = configureStore({
     limitProductSlice: limitProductsReducer,
     filterSlice: filterSliceReducer,
     addToCartSlice: addToCartReducer,
-    // fetchProductsByCategorySlice: fetchProductsByCategoryReducer,
-    // postsSlice: postsReducer,
   },
 });
 export type RootState = ReturnType<typeof store.getState>;

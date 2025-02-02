@@ -4,7 +4,7 @@ import { GoChevronDown } from "react-icons/go";
 import CartProductCard from "../components/CartProductCard.tsx";
 import { clearCart } from "../store/slices/AddToCartSlice.ts";
 import { Link } from "react-router-dom";
-import useAppDispatch from "../hooks/useAppDispatch.tsx";
+import { useAppDispatch } from "../hooks/useAppSelectorAndUseAppDispatch.tsx";
 
 const Cart = () => {
   const dispatch = useAppDispatch();

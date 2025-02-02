@@ -9,7 +9,6 @@ import Product from "./pages/ProductDetails.tsx";
 import AllProducts from "./pages/AllProducts.tsx";
 import FooterSection from "./components/homePage/FooterSection.tsx";
 import Cart from "./pages/Cart.tsx";
-// import Practise from "./pages/practise.tsx"
 
 function App() {
   const router = createBrowserRouter([

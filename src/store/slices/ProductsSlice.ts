@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk, PayloadAction } from "@reduxjs/toolkit";
-import axios from "axios";
+// import axios from "axios";
+import AxiosIntance from "../../components/AxiosIntance.tsx";
 
-// types for the products
 interface Product {
   id: number;
   title: string;
@@ -26,14 +26,11 @@ const initialState: ProductState = {
 export const fetchProducts = createAsyncThunk<Product[]>(
   "product/fetchProducts",
   async () => {
-    const response = await axios.get<Product[]>(
-      "https://fakestoreapi.com/products"
-    );
+    const response = await AxiosIntance.get<Product[]>("/");
     return response.data;
   }
 );
 
-// Create the slice
 const productSlice = createSlice({
   name: "product",
   initialState,
@@ -51,7 +48,7 @@ const productSlice = createSlice({
         fetchProducts.fulfilled,
         (state, action: PayloadAction<Product[]>) => {
           state.status = "succeeded";
-          state.products = action.payload; // Storing fetched products in the state
+          state.products = action.payload;
         }
       )
       .addCase(fetchProducts.rejected, (state) => {
@@ -60,6 +57,5 @@ const productSlice = createSlice({
   },
 });
 
-// Export actions and reducer
 export const { setProducts } = productSlice.actions;
 export default productSlice.reducer;

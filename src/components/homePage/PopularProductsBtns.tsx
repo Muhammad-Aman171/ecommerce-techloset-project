@@ -1,10 +1,11 @@
 import Button from "../buttons/button.tsx";
 import React from "react";
-import { useDispatch, useSelector } from "react-redux";
 import { filterByCategory } from "../../store/slices/FilterCategoriesSlice.ts";
-import { RootState, AppDispatch } from "../../store/store.ts";
-import useAppDispatch from "../../hooks/useAppDispatch.tsx";
-import useAppSelector from "../../hooks/useAppSelector.tsx";
+import {
+  useAppSelector,
+  useAppDispatch,
+} from "../../hooks/useAppSelectorAndUseAppDispatch.tsx";
+import { buttons } from "../../constant/ConstantsData.tsx";
 
 const PopularProducts: React.FC = () => {
   const dispatch = useAppDispatch();
@@ -25,26 +26,14 @@ const PopularProducts: React.FC = () => {
         </h1>
       </div>
       <div className="flex items-center justify-center flex-wrap gap-3 ">
-        <Button
-          label="Electronics"
-          onClick={() => handleFilter("electronics")}
-          className="text-[16.38px] font-medium leading-[24.57px] text-textColor border border-borderColor rounded-[20px] px-[30px] py-[10px] hover:bg-[#1B5A7D] hover:text-white   "
-        />
-        <Button
-          label="Jewelry"
-          onClick={() => handleFilter("jewelery")}
-          className="text-[16.38px] font-medium leading-[24.57px] text-textColor border border-borderColor rounded-[20px] px-[30px] py-[10px] hover:bg-[#1B5A7D] hover:text-white   "
-        />
-        <Button
-          label="Men's Clothing"
-          onClick={() => handleFilter("men's clothing")}
-          className="text-[16.38px] font-medium leading-[24.57px] text-textColor border border-borderColor rounded-[20px] px-[30px] py-[10px] hover:bg-[#1B5A7D] hover:text-white  "
-        />
-        <Button
-          label="Women's Clothing"
-          onClick={() => handleFilter("women's clothing")}
-          className="text-[16.38px] font-medium leading-[24.57px] text-textColor border border-borderColor rounded-[20px] px-[30px] py-[10px] hover:bg-[#1B5A7D] hover:text-white  "
-        />
+        {buttons.map((buttonTitle, index) => (
+          <Button
+            key={index}
+            label={buttonTitle.label}
+            onClick={() => handleFilter(buttonTitle.value)}
+            className="text-[16.38px] font-medium leading-[24.57px] text-textColor border border-borderColor rounded-[20px] px-[30px] py-[10px] hover:bg-[#1B5A7D] hover:text-white   "
+          />
+        ))}
       </div>
     </div>
   );

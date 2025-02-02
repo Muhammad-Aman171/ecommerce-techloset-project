@@ -1,5 +1,4 @@
 import React from "react";
-// import MembersCard from "../MembersCard.tsx";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -9,8 +8,6 @@ import { Pagination } from "swiper/modules";
 import MembersImg1 from "../../assets/imgs/organizersimg1.png";
 import MembersImg2 from "../../assets/imgs/organizersimg2.png";
 import MembersImg3 from "../../assets/imgs/organizersimg3.png";
-// import UnFillCircle from "../slidersCircles/UnFillCircle.tsx";
-// import FillCircle from "../slidersCircles/FillCircle.tsx";
 
 const MembersSection = () => {
   return (
