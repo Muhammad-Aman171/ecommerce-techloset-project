@@ -37,10 +37,10 @@ const Home: React.FC = () => {
         </div>
         <OrganizationsSection />
         <div className="flex items-center justify-between w-full m-6 max-md:justify-around ">
-          <h1 className="text-[25.38px] text-[#1B5A7D] leading-[38.07px] font-bold  ">
+          <h1 className="text-[25.38px] text-textColor leading-[38.07px] font-bold  ">
             Latest news
           </h1>
-          <h3 className="text-[20.38px] text-[#1B5A7D] leading-[30.57px] font-medium  ">
+          <h3 className="text-[20.38px] text-textColor leading-[30.57px] font-medium  ">
             View all
           </h3>
         </div>

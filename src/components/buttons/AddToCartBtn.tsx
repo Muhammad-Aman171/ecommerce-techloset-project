@@ -1,16 +1,13 @@
 import React from "react";
 import { BsCart3 } from "react-icons/bs";
+import { AddToCartBtnProps } from "../../types/types";
 
-interface AddToCartBtnProps {
-  id?: number; 
-  onClick?: (id: number) => void;
-}
 const AddToCartBtn: React.FC<AddToCartBtnProps> = ({ id, onClick }) => {
   return (
     <button
       onClick={() => {
         if (onClick) {
-          onClick(id!); 
+          onClick(id!);
         } else {
           console.error("onClick function is not defined!");
         }
@@ -21,7 +18,7 @@ const AddToCartBtn: React.FC<AddToCartBtnProps> = ({ id, onClick }) => {
         {/* {count} */}
         Add to cart
       </h1>
-      <div className=" bg-[#EDA415] rounded-full w-[30px] h-[30px] flex items-center justify-center ">
+      <div className=" bg-primary rounded-full w-[30px] h-[30px] flex items-center justify-center ">
         <BsCart3 className="text-white rounded-full w-[17px] h-[17px]  " />
       </div>
     </button>

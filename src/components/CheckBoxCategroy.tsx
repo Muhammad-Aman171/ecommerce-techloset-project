@@ -1,17 +1,13 @@
 import React from "react";
 
-interface CheckBoxCategroyTypesProps {
-  heading?: string;
-  number?: string;
-  value?: string;
-}
+import { CheckBoxCategroyTypesProps } from "../types/types";
+
 
 const CheckBoxCategroy: React.FC<CheckBoxCategroyTypesProps> = ({
   heading,
   number,
   value,
 }) => {
-
   return (
     <div className="flex justify-between  ">
       <span className="flex gap-x-[10px] ">

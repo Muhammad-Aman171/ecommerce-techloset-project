@@ -1,21 +1,7 @@
 import { createSlice, createAsyncThunk, PayloadAction } from "@reduxjs/toolkit";
 // import axios from "axios";
 import AxiosIntance from "../../components/AxiosIntance.tsx";
-
-interface Product {
-  id: number;
-  title: string;
-  price: number;
-  description: string;
-  category: string;
-  image: string;
-}
-
-interface ProductState {
-  products: Product[];
-  status: "idle" | "loading" | "failed" | "succeeded";
-  error: null;
-}
+import { ProductState, Product } from "../../types/types.ts";
 
 const initialState: ProductState = {
   products: [],

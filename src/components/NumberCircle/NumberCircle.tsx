@@ -1,8 +1,5 @@
 import React from "react";
-
-interface NumberCircleTypesProps {
-  content?: string;
-}
+import { NumberCircleTypesProps } from "../../types/types";
 
 const NumberCircle: React.FC<NumberCircleTypesProps> = ({ content }) => {
   return (

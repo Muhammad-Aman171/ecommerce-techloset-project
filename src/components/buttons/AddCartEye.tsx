@@ -1,9 +1,7 @@
 import React from "react";
 import { FiEye } from "react-icons/fi";
+import { AddCartEyeTypesProps } from "../../types/types";
 
-interface AddCartEyeTypesProps {
-  className?: string;
-}
 
 const AddCartEye: React.FC<AddCartEyeTypesProps> = ({ className }) => {
   return (

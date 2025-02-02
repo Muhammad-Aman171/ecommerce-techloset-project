@@ -1,10 +1,5 @@
 import React from "react";
-
-interface FacilityCardTypesProps {
-  srcImg?: string;
-  heading?: string;
-  para?: string;
-}
+import { FacilityCardTypesProps } from "../types/types";
 
 const FacilityCard: React.FC<FacilityCardTypesProps> = ({
   srcImg,
@@ -17,10 +12,10 @@ const FacilityCard: React.FC<FacilityCardTypesProps> = ({
         <img src={srcImg} alt="box img does not show" />
       </div>
       <div>
-        <h3 className="text-[#003F62] text-[22.09px] leading-[33.14px] font-semibold  ">
+        <h3 className="text-secoundTextColor text-[22.09px] leading-[33.14px] font-semibold  ">
           {heading}
         </h3>
-        <p className="text-[18.09px] text-[#003F62] leading-[27.14px]  ">
+        <p className="text-[18.09px] text-secoundTextColor leading-[27.14px]  ">
           {para}
         </p>
       </div>

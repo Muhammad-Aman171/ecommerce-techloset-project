@@ -1,20 +1,6 @@
 import { createSlice, createAsyncThunk, PayloadAction } from "@reduxjs/toolkit";
 import axios from "axios";
-
-interface products {
-  id: number;
-  title: string;
-  price: number;
-  description: string;
-  category: string;
-  image: string;
-}
-
-interface ProductState {
-  products: products[];
-  status: "idle" | "loading" | "failed" | "succeeded";
-  error: null;
-}
+import { Products, ProductState } from "../../types/types";
 
 export const fetchProductInLimits = createAsyncThunk(
   "product/fetchProductInLimits",
@@ -36,7 +22,7 @@ const fetchProductInLimitsSlice = createSlice({
   name: "limitProducts",
   initialState,
   reducers: {
-    setLimitProducts: (state, action: PayloadAction<products[]>) => {
+    setLimitProducts: (state, action: PayloadAction<Products[]>) => {
       state.products = action.payload;
     },
   },
@@ -47,7 +33,7 @@ const fetchProductInLimitsSlice = createSlice({
       })
       .addCase(
         fetchProductInLimits.fulfilled,
-        (state, action: PayloadAction<products[]>) => {
+        (state, action: PayloadAction<Products[]>) => {
           state.status = "succeeded";
           state.products = action.payload;
         }

@@ -1,20 +1,10 @@
 import Button from "../buttons/button.tsx";
 import React from "react";
-import { filterByCategory } from "../../store/slices/FilterCategoriesSlice.ts";
-import {
-  useAppSelector,
-  useAppDispatch,
-} from "../../hooks/useAppSelectorAndUseAppDispatch.tsx";
 import { buttons } from "../../constant/ConstantsData.tsx";
+import usePopularProductsBtn from "../../hooks/usePopularProductsBtn.tsx";
 
 const PopularProducts: React.FC = () => {
-  const dispatch = useAppDispatch();
-  const allProducts = useAppSelector((state) => state.productSlice.products);
-  const status = useAppSelector((state) => state.productSlice.status);
-
-  const handleFilter = (category: string) => {
-    dispatch(filterByCategory({ category, products: allProducts }));
-  };
+  const { handleFilter, status } = usePopularProductsBtn();
 
   if (status === "loading") return <p>Loading...</p>;
 
@@ -26,12 +16,12 @@ const PopularProducts: React.FC = () => {
         </h1>
       </div>
       <div className="flex items-center justify-center flex-wrap gap-3 ">
-        {buttons.map((buttonTitle, index) => (
+        {buttons?.map((buttonTitle, index) => (
           <Button
             key={index}
             label={buttonTitle.label}
             onClick={() => handleFilter(buttonTitle.value)}
-            className="text-[16.38px] font-medium leading-[24.57px] text-textColor border border-borderColor rounded-[20px] px-[30px] py-[10px] hover:bg-[#1B5A7D] hover:text-white   "
+            className="text-[16.38px] font-medium leading-[24.57px] text-textColor border border-borderColor rounded-[20px] px-[30px] py-[10px] hover:bg-textColor hover:text-white   "
           />
         ))}
       </div>

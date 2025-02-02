@@ -20,22 +20,22 @@ const Cart = () => {
           <div className="col-span-4 max-xl:col-span-1 ">
             <div className="grid grid-cols-5 items-center bg-[#E2F4FF] h-[56px] max-md:grid-cols-3    ">
               <div className="col-span-2 text-start max-md:col-span-1 ">
-                <h3 className="text-[20.68px] text-[#232323] leading-[31.02px] font-medium ml-2 ">
+                <h3 className="text-[20.68px] text-thirdTextColor leading-[31.02px] font-medium ml-2 ">
                   Product
                 </h3>
               </div>
               <div>
-                <h3 className="text-[20.68px] text-[#232323] leading-[31.02px] font-medium ">
+                <h3 className="text-[20.68px] text-thirdTextColor leading-[31.02px] font-medium ">
                   Price
                 </h3>
               </div>
               <div className="max-md:hidden ">
-                <h3 className="text-[20.68px] text-[#232323] leading-[31.02px] font-medium ">
+                <h3 className="text-[20.68px] text-thirdTextColor leading-[31.02px] font-medium ">
                   Quantity
                 </h3>
               </div>
               <div>
-                <h3 className="text-[20.68px] text-[#232323] leading-[31.02px] font-medium ">
+                <h3 className="text-[20.68px] text-thirdTextColor leading-[31.02px] font-medium ">
                   Remove
                 </h3>
               </div>
@@ -47,7 +47,7 @@ const Cart = () => {
               <Link to="/">
                 <Button
                   content="Continue shopping"
-                  className="text-white py-[19.5px] px-[37px] bg-[#EDA415] rounded-[32.42px] text-[22.7px] leading-[34.05px] font-semibold text-nowrap max-xl:w-full max-xl:px-3 hover:text-[#EDA415] hover:bg-white hover:border hover:border-[#EDA415]    "
+                  className="text-white py-[19.5px] px-[37px] bg-primary rounded-[32.42px] text-[22.7px] leading-[34.05px] font-semibold text-nowrap max-xl:w-full max-xl:px-3 hover:text-primary hover:bg-white hover:border hover:border-primary    "
                 />
               </Link>
               <Button
@@ -63,15 +63,15 @@ const Cart = () => {
           </div>
 
           <div className="border border-yellow-700 col-span-2 max-xl:my-[50px] max-xl:col-span-1  ">
-            <h3 className="bg-[#E2F4FF] h-[56px] text-[20.68px] text-[#232323] leading-[31.02px] font-medium grid place-items-center text-nowrap ">
+            <h3 className="bg-[#E2F4FF] h-[56px] text-[20.68px] text-thirdTextColor leading-[31.02px] font-medium grid place-items-center text-nowrap ">
               Cart total
             </h3>
             <div className="px-[35px] py-[21px] flex flex-col gap-y-[20px] ">
               <div className="flex items-center justify-between ">
-                <h4 className="text-[19.68px] text-[#232323] leading-[29.52px]  font-medium  ">
+                <h4 className="text-[19.68px] text-thirdTextColor leading-[29.52px]  font-medium  ">
                   Subtotal
                 </h4>
-                <p className="text-[22.68px] leading-[34.02px] text-[#232323] font-medium ">
+                <p className="text-[22.68px] leading-[34.02px] text-thirdTextColor font-medium ">
                   $ 23,20
                 </p>
               </div>
@@ -79,10 +79,10 @@ const Cart = () => {
               <hr className=" border border-[#AFAFAF]  " />
 
               <div className="border border-[#DFDFDF] px-[20px] py-[14px] rounded-[20px] flex items-center justify-between ">
-                <h4 className="text-[16.68px] text-[#232323] leading-[25.02px] ">
+                <h4 className="text-[16.68px] text-thirdTextColor leading-[25.02px] ">
                   Enter coupon code
                 </h4>
-                <h5 className="text-[14.68px] text-[#003F62] leading-[22.02px] font-medium ">
+                <h5 className="text-[14.68px] text-secoundTextColor leading-[22.02px] font-medium ">
                   Apply
                 </h5>
               </div>
@@ -90,20 +90,20 @@ const Cart = () => {
               <hr className=" border border-[#AFAFAF]  " />
 
               <div className="border border-[#DFDFDF] px-[20px] py-[14px] rounded-[20px] flex items-center justify-between   ">
-                <p className="text-[16.68px] leading-[25.02px] text-[#232323]  ">
+                <p className="text-[16.68px] leading-[25.02px] text-thirdTextColor  ">
                   County
                 </p>
                 <GoChevronDown className="w-6 h-6  " />
               </div>
               <div className="flex items-center justify-between ">
-                <h4 className="text-[16.68px] text-[#232323] leading-[25.02px] ">
+                <h4 className="text-[16.68px] text-thirdTextColor leading-[25.02px] ">
                   Total amount
                 </h4>
-                <h5 className="text-[18.68px] text-[#232323] leading-[25.02px]">
+                <h5 className="text-[18.68px] text-thirdTextColor leading-[25.02px]">
                   $ 23,20
                 </h5>
               </div>
-              <div className="bg-[#EDA415] px-[62px] py-[10px] rounded-[32.42px] text-white hover:text-[#EDA415] hover:bg-white hover:border hover:border-[#EDA415] ">
+              <div className="bg-primary px-[62px] py-[10px] rounded-[32.42px] text-white hover:text-primary hover:bg-white hover:border hover:border-primary ">
                 <p className="text-[20.7px] font-semibold leading-[31.05px] ">
                   Proceed to ckeckout
                 </p>

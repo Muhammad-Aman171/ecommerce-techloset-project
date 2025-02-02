@@ -1,30 +1,15 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import "swiper/css/pagination"; 
-import "swiper/css/navigation"; 
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
 import { Pagination } from "swiper/modules";
-import { fetchProductInLimits } from "../../store/slices/LimitProductsSlice.ts";
-import {
-  useAppDispatch,
-  useAppSelector,
-} from "../../hooks/useAppSelectorAndUseAppDispatch.tsx";
 import { Link } from "react-router-dom";
+import useProductReviewSlider from "../../hooks/useProductReviewSlider.tsx";
 
 const ProductReview: React.FC = () => {
-  const dispatch = useAppDispatch();
-  const limitProducts = useAppSelector(
-    (state) => state.limitProductSlice.products
-  );
-  const status = useAppSelector((state) => state.limitProductSlice.status);
-  const error = useAppSelector((state) => state.limitProductSlice.error);
-
-  useEffect(() => {
-    if (status === "idle") {
-      dispatch(fetchProductInLimits());
-    }
-  }, [dispatch, status]);
+  const { limitProducts, status, error } = useProductReviewSlider();
 
   if (status === "loading") {
     return <p>Loading...</p>;
@@ -46,7 +31,7 @@ const ProductReview: React.FC = () => {
           0: { slidesPerView: 1, spaceBetween: 10 },
         }}
       >
-        {limitProducts.map((limitProduct) => (
+        {limitProducts?.map((limitProduct) => (
           <SwiperSlide key={limitProduct.id}>
             <Link to={`/products/${limitProduct.id}`}>
               <div

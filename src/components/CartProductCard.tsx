@@ -14,19 +14,14 @@ const CartProductCard: React.FC = () => {
 
   const products = useAppSelector((state) => state.productSlice.products);
 
-  console.log("Products from Redux:", products);
-
   const cartProducts = cartItems
-    .map((cartItem: { id }) =>
+    ?.map((cartItem: { id }) =>
       products.find((product) => product.id === cartItem.id)
     )
     .filter((product) => product !== undefined);
 
-  console.log("Cart Products to Display:", cartProducts);
-
   const handleRemove = (id: number) => {
     dispatch(removeFromCart(id));
-    console.log(`Removed product with ID: ${id}`);
   };
 
   if (cartProducts.length === 0) {
@@ -34,7 +29,7 @@ const CartProductCard: React.FC = () => {
   }
   return (
     <div>
-      {cartProducts.map((product) => (
+      {cartProducts?.map((product) => (
         <div
           key={product.id}
           className="grid grid-cols-5 place-items-center max-md:grid-cols-3  "
@@ -48,19 +43,19 @@ const CartProductCard: React.FC = () => {
               />
             </div>
             <div className="flex flex-col gap-y-2.5 max-md:hidden ">
-              <h3 className="text-[#003F62] text-[20.68px] leading-[31.02px] font-semibold  ">
+              <h3 className="text-secoundTextColor text-[20.68px] leading-[31.02px] font-semibold  ">
                 {product.title.slice(0, 7) + "..."}
               </h3>
-              <p className="text-[#2F2F2F] text-[20.68px] leading-[31.02px]">
+              <p className="text-cartProductCardTextColor text-[20.68px] leading-[31.02px]">
                 Color: Green
               </p>
-              <p className="text-[#2F2F2F] text-[20.68px] leading-[31.02px] ">
+              <p className="text-cartProductCardTextColor text-[20.68px] leading-[31.02px] ">
                 Size: 30
               </p>
             </div>
           </div>
           <div>
-            <h3 className="text-[22.68px] leading-[34.02px] text-[#2F2F2F] ">
+            <h3 className="text-[22.68px] leading-[34.02px] text-cartProductCardTextColor ">
               ${product.price}
             </h3>
           </div>
@@ -68,7 +63,7 @@ const CartProductCard: React.FC = () => {
             <QuantityBtn />
           </div>
           <div>
-            <h3 className="text-[22.68px] leading-[34.02px] text-[#2F2F2F] hover:text-red-700 ">
+            <h3 className="text-[22.68px] leading-[34.02px] text-cartProductCardTextColor hover:text-red-700 ">
               <button onClick={() => handleRemove(product.id)}>
                 <RxCrossCircled />
               </button>

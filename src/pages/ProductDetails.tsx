@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import StarImg from "../assets/imgs/star.png";
 import Button from "../components/buttons/button.tsx";
 import { GoHeart } from "react-icons/go";
@@ -6,16 +6,10 @@ import { TbBrandGoogle } from "react-icons/tb";
 import { RiFacebookCircleLine } from "react-icons/ri";
 import { PiWhatsappLogo } from "react-icons/pi";
 import { GoCheck } from "react-icons/go";
-import { useParams } from "react-router-dom";
-import { useAppSelector } from "../hooks/useAppSelectorAndUseAppDispatch.tsx";
+import useProductDetailsPage from "../hooks/useProductDetailsPage.tsx";
 
 const ProductDetails: React.FC = () => {
-  const [count, setCount] = useState(0);
-
-  const { id } = useParams();
-  const allProducts = useAppSelector((state) => state.productSlice.products);
-
-  const product = allProducts.find((product) => product.id === Number(id));
+  const { count, setCount, product } = useProductDetailsPage();
 
   if (!product) {
     return <p>Loading product details...</p>;
@@ -36,10 +30,10 @@ const ProductDetails: React.FC = () => {
           </div>
           <div className="flex flex-col items-start ">
             <div className="flex flex-col gap-y-4 ">
-              <h1 className="text-[29.68px] text-[#003F62] leading-[44.51px] font-medium text-start text-nowrap ">
+              <h1 className="text-[29.68px] text-secoundTextColor leading-[44.51px] font-medium text-start text-nowrap ">
                 {product.title.slice(0, 15) + "..."}
               </h1>
-              <h2 className="text-[29.68px] text-[#4A4A4A] leading-[44.51px] font-semibold text-start text-nowrap ">
+              <h2 className="text-[29.68px] text-fifthTextColor leading-[44.51px] font-semibold text-start text-nowrap ">
                 {product.price}
               </h2>
               <div className="flex items-center gap-x-[9.67px] text-nowrap ">
@@ -50,12 +44,12 @@ const ProductDetails: React.FC = () => {
                   <img src={StarImg} alt="star img does not show" />
                   <img src={StarImg} alt="star img does not show" />
                 </div>
-                <div className="text-[13.19px] leading-[19.79px] text-[#4A4A4A] font-medium ">
+                <div className="text-[13.19px] leading-[19.79px] text-fifthTextColor font-medium ">
                   <p>No reviews</p>
                 </div>
               </div>
               <div className="flex items-center gap-x-[19.08px] ">
-                <h3 className="text-[18.17px] text-[#232323] leading-[27.26px] font-medium   ">
+                <h3 className="text-[18.17px] text-thirdTextColor leading-[27.26px] font-medium   ">
                   Availability:
                 </h3>
                 <GoCheck className="text-[#30BD57] w-6 h-6 " />
@@ -68,50 +62,50 @@ const ProductDetails: React.FC = () => {
               </p>
             </div>
 
-            <hr className="border border-[#BDBDBD] w-full my-[20px] " />
+            <hr className="border border-secoundBorderColor w-full my-[20px] " />
 
             <div className="flex flex-col gap-y-[26px]">
               <div className="flex items-center gap-x-[19.08px] ">
-                <p className="text-[18.17px] text-[#232323] font-medium  ">
+                <p className="text-[18.17px] text-thirdTextColor font-medium  ">
                   Color:
                 </p>
                 <span className="w-[18px] h-[18px] rounded-[50%] bg-[#D0EC48] "></span>
                 <span className="w-[18px] h-[18px] rounded-[50%] bg-[#565656]  "></span>
               </div>
               <div className="flex items-center  flex-wrap  gap-x-[19.08px] max-md:gap-y-2.5   ">
-                <p className="text-[18.17px] text-[#232323] leading-[27.26px] font-medium  ">
+                <p className="text-[18.17px] text-thirdTextColor leading-[27.26px] font-medium  ">
                   Size:
                 </p>
-                <p className="grid items-center w-[63px] h-[32px] bg-[#EEEEEE] ">
+                <p className="grid items-center w-[63px] h-[32px] bg-ProductDetailsBgColor ">
                   30
                 </p>
-                <p className="grid items-center w-[63px] h-[32px] bg-[#EEEEEE] ">
+                <p className="grid items-center w-[63px] h-[32px] bg-ProductDetailsBgColor ">
                   56
                 </p>
-                <p className="grid items-center w-[63px] h-[32px] bg-[#EEEEEE] ">
+                <p className="grid items-center w-[63px] h-[32px] bg-ProductDetailsBgColor ">
                   42
                 </p>
-                <p className="grid items-center w-[63px] h-[32px] bg-[#EEEEEE] ">
+                <p className="grid items-center w-[63px] h-[32px] bg-ProductDetailsBgColor ">
                   48
                 </p>
               </div>
               <div className="flex items-center gap-x-[19.08px] ">
-                <p className="text-[18.17px] text-[#232323] leading-[27.26px] font-medium   ">
+                <p className="text-[18.17px] text-thirdTextColor leading-[27.26px] font-medium   ">
                   Quantity:
                 </p>
                 <div className=" flex items-center ">
                   <button
                     onClick={() => setCount(count - 1)}
-                    className="grid place-items-center w-[35px] h-[32px] bg-[#EEEEEE] border border-[#BDBDBD]  "
+                    className="grid place-items-center w-[35px] h-[32px] bg-ProductDetailsBgColor border border-secoundBorderColor  "
                   >
                     -
                   </button>
-                  <p className="grid place-items-center w-[63px] h-[32px] bg-[#EEEEEE] border border-[#BDBDBD] ">
+                  <p className="grid place-items-center w-[63px] h-[32px] bg-ProductDetailsBgColor border border-secoundBorderColor ">
                     {count}
                   </p>
                   <button
                     onClick={() => setCount(count + 1)}
-                    className="grid place-items-center w-[35px] h-[32px] bg-[#EEEEEE] border border-[#BDBDBD]  "
+                    className="grid place-items-center w-[35px] h-[32px] bg-ProductDetailsBgColor border border-secoundBorderColor  "
                   >
                     +
                   </button>
@@ -121,46 +115,46 @@ const ProductDetails: React.FC = () => {
               <div className="flex items-center justify-between gap-x-[29px] max-md:flex-col max-md:gap-y-[20px] ">
                 <Button
                   content="Add to cart"
-                  className="text-white text-[22.7px] bg-[#EDA415] px-[56px] py-[19.5px] leading-[34.05px] font-semibold rounded-[32.42px] text-nowrap max-md:w-full  "
+                  className="text-white text-[22.7px] bg-primary px-[56px] py-[19.5px] leading-[34.05px] font-semibold rounded-[32.42px] text-nowrap max-md:w-full  "
                 />
                 <Button
                   content="Buy it now"
-                  className="text-white text-[22.7px] bg-[#EDA415] px-[56px] py-[19.5px] leading-[34.05px] font-semibold rounded-[32.42px] text-nowrap "
+                  className="text-white text-[22.7px] bg-primary px-[56px] py-[19.5px] leading-[34.05px] font-semibold rounded-[32.42px] text-nowrap "
                 />
-                <span className="bg-[#EEEEEE] w-[74px] h-[73px] rounded-[500px] grid place-items-center max-md:hidden  ">
+                <span className="bg-ProductDetailsBgColor w-[74px] h-[73px] rounded-[500px] grid place-items-center max-md:hidden  ">
                   <GoHeart className=" w-9 h-9 " />
                 </span>
               </div>
             </div>
 
-            <hr className="border border-[#BDBDBD] w-full my-[20px] " />
+            <hr className="border border-secoundBorderColor w-full my-[20px] " />
 
             <div className="flex flex-col gap-y-[31px]  ">
               <div className="flex items-center gap-x-[19px]  ">
-                <p className="text-[18.17px] text-[#232323] leading-[27.26px] font-medium  ">
+                <p className="text-[18.17px] text-thirdTextColor leading-[27.26px] font-medium  ">
                   Sku:
                 </p>
-                <p className=" text-[18.17px] leading-[27.26px] text-[#434343] font-medium  ">
+                <p className=" text-[18.17px] leading-[27.26px] text-forthTextColor font-medium  ">
                   01133-9-9
                 </p>
               </div>
               <div className="flex items-center gap-x-[13px]">
-                <p className="text-[18.17px] text-[#232323] leading-[27.26px] font-medium  ">
+                <p className="text-[18.17px] text-thirdTextColor leading-[27.26px] font-medium  ">
                   Category:
                 </p>
-                <p className="text-[13.17px] text-[#434343] leading-[19.76px]  ">
+                <p className="text-[13.17px] text-forthTextColor leading-[19.76px]  ">
                   20% off,
                 </p>
-                <p className="text-[13.17px] text-[#434343] leading-[19.76px]  ">
+                <p className="text-[13.17px] text-forthTextColor leading-[19.76px]  ">
                   49% off
                 </p>
-                <p className="text-[13.17px] text-[#434343] leading-[19.76px]  ">
+                <p className="text-[13.17px] text-forthTextColor leading-[19.76px]  ">
                   Alex remote
                 </p>
               </div>
 
               <div className="flex items-center gap-x-[19px] ">
-                <p className="text-[18.17px] text-[#232323] leading-[27.26px] font-medium">
+                <p className="text-[18.17px] text-thirdTextColor leading-[27.26px] font-medium">
                   Share:
                 </p>
                 <TbBrandGoogle className="w-6 h-6 text-[#3B3B3B] " />
@@ -177,12 +171,12 @@ const ProductDetails: React.FC = () => {
           />
           <Button
             content="Reviews"
-            className="w-[187px] h-[60px] bg-[#003F62] text-[20.68px] leading-[31.02px] font-medium text-white rounded-[20px]  "
+            className="w-[187px] h-[60px] bg-secoundTextColor text-[20.68px] leading-[31.02px] font-medium text-white rounded-[20px]  "
           />
         </div>
 
         <div className="border border-[#B8B8B8] rounded-[20px] w-full h-[223px] flex flex-col justify-center gap-y-[17px] text-start px-[50px] mx-[50px] max-md:mx-[10px] max-md:px-[20px] ">
-          <p className="text-[22.68px] text-[#003F62] leading-[34.02px] font-semibold  ">
+          <p className="text-[22.68px] text-secoundTextColor leading-[34.02px] font-semibold  ">
             Customer reviews
           </p>
           <p className="text-[19.68px] text-[#4F4F4F] leading-[29.52px]  ">
@@ -190,7 +184,7 @@ const ProductDetails: React.FC = () => {
           </p>
           <Button
             content="Write a review"
-            className="bg-[#003F62] w-[196px] h-[40px] text-[19.68px] leading-[29.52px] text-white underline  "
+            className="bg-secoundTextColor w-[196px] h-[40px] text-[19.68px] leading-[29.52px] text-white underline  "
           />
         </div>
       </div>

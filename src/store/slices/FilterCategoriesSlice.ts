@@ -1,19 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { RootState } from "../store";
-
-interface Product {
-  id: number;
-  title: string;
-  price: number;
-  category: string;
-  image: string;
-  description: string;
-}
-
-interface FilterState {
-  filteredProducts: Product[];
-  selectedCategories: string[];
-}
+import { Product, FilterState } from "../../types/types";
 
 const initialState: FilterState = {
   filteredProducts: [],
@@ -34,10 +21,9 @@ const filterSlice = createSlice({
           ? products
           : products.filter((product) => product.category === category);
     },
-    
   },
 });
-  
+
 export const { filterByCategory } = filterSlice.actions;
 
 export const selectFilteredProducts = (state: RootState) =>

@@ -23,7 +23,7 @@ const HeroSection = () => {
         <div className="flex gap-x-5 max-md:flex-col max-md:gap-y-4   ">
           <Button
             content="Shop now"
-            className="bg-[#EDA415]  text-white font-semibold text-[16px] leading-[24px] px-[32px] py-[18.5px] rounded-[20px] max-md:w-[300px] max-md:h-[61px] max-md:mx-0 "
+            className="bg-primary  text-white font-semibold text-[16px] leading-[24px] px-[32px] py-[18.5px] rounded-[20px] max-md:w-[300px] max-md:h-[61px] max-md:mx-0 "
           />
           <Button
             content="View more"
@@ -45,7 +45,7 @@ const HeroSection = () => {
           />
         </span>
         <span className=" relative  top-[-150px] right-[-250px] max-md:right-[-175px]  ">
-          <p className="absolute  w-[120px] h-[114.5px] text-white bg-[#EDA415] flex items-center justify-center rounded-[674.16px] text-[22px] leading-[32.36px] text-semibold ">
+          <p className="absolute  w-[120px] h-[114.5px] text-white bg-primary flex items-center justify-center rounded-[674.16px] text-[22px] leading-[32.36px] text-semibold ">
             only <br /> $89
           </p>
         </span>
