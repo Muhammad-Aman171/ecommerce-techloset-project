@@ -7,7 +7,6 @@ import { RiFacebookCircleLine } from "react-icons/ri";
 import { PiWhatsappLogo } from "react-icons/pi";
 import { GoCheck } from "react-icons/go";
 import useProductDetailsPage from "../hooks/useProductDetailsPage.ts";
-//this 
 
 const ProductDetails: React.FC = () => {
   const { count, setCount, product } = useProductDetailsPage();

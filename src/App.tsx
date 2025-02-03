@@ -1,5 +1,5 @@
 import React from "react";
-import { createBrowserRouter, RouterProvider } from "react-router";
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import "./App.css";
 import Home from "./pages/Home.tsx";
 import NavbarContact from "./components/NavbarContact.tsx";
@@ -10,57 +10,31 @@ import AllProducts from "./pages/AllProducts.tsx";
 import FooterSection from "./components/homePage/FooterSection.tsx";
 import Cart from "./pages/Cart.tsx";
 
+const Layout = () => {
+  return (
+    <>
+      <NavbarContact />
+      <NavbarSearchBar />
+      <NavbarLinks />
+      <Outlet />
+      <FooterSection />
+    </>
+  );
+};
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Layout />,
+    children: [
+      { path: "/", element: <Home /> },
+      { path: "/products/:id", element: <Product /> },
+      { path: "/AllProducts", element: <AllProducts /> },
+      { path: "/Cart", element: <Cart /> },
+    ],
+  },
+]);
 function App() {
-  const router = createBrowserRouter([
-    {
-      path: "/",
-      element: (
-        <>
-          <NavbarContact />
-          <NavbarSearchBar />
-          <NavbarLinks />
-          <Home />
-          <FooterSection />
-        </>
-      ),
-    },
-    {
-      path: "/products/:id",
-      element: (
-        <>
-          <NavbarContact />
-          <NavbarSearchBar />
-          <NavbarLinks />
-          <Product />
-          <FooterSection />
-        </>
-      ),
-    },
-    {
-      path: "/AllProducts",
-      element: (
-        <>
-          <NavbarContact />
-          <NavbarSearchBar />
-          <NavbarLinks />
-          <AllProducts />
-          <FooterSection />
-        </>
-      ),
-    },
-    {
-      path: "/Cart",
-      element: (
-        <>
-          <NavbarContact />
-          <NavbarSearchBar />
-          <NavbarLinks />
-          <Cart />
-          <FooterSection />
-        </>
-      ),
-    },
-  ]);
   return (
     <div>
       <RouterProvider router={router} />
