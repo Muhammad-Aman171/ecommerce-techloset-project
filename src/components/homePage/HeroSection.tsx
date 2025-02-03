@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "../buttons/button.tsx";
+import Button from "../buttons/Button.tsx";
 import CameraImg from "../../assets/imgs/camera.png";
 import FillCircle from "../slidersCircles/FillCircle.tsx";
 import UnFillCircle from "../slidersCircles/UnFillCircle.tsx";

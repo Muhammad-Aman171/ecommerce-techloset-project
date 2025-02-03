@@ -1,7 +1,6 @@
 import { createSlice, createAsyncThunk, PayloadAction } from "@reduxjs/toolkit";
-// import axios from "axios";
-import AxiosIntance from "../../components/AxiosIntance.tsx";
 import { ProductState, Product } from "../../types/types.ts";
+import AxiosIntance from "../../utils/AxiosIntance.ts";
 
 const initialState: ProductState = {
   products: [],

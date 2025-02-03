@@ -4,7 +4,7 @@ import AddToCartBtn from "./buttons/AddToCartBtn.tsx";
 import { AiTwotoneStar } from "react-icons/ai";
 import { GoHeart } from "react-icons/go";
 import { Link } from "react-router-dom";
-import useProductCard from "../hooks/useProductCard.tsx";
+import useProductCard from "../hooks/useProductCard.ts";
 import { ProductCardTypesProps } from "../types/types.ts";
 
 const ProductCard: React.FC<ProductCardTypesProps> = ({

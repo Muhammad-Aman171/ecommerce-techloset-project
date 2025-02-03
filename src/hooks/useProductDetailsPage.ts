@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useParams } from "react-router-dom";
-import { useAppSelector } from "./useAppSelectorAndUseAppDispatch.tsx";
+import { useAppSelector } from "./useRedux.ts";
 
 const useProductDetailsPage = () => {
   const [count, setCount] = useState(0);

@@ -1,16 +1,16 @@
 import React from "react";
-import Button from "../components/buttons/button.tsx";
+import Button from "../components/buttons/Button.tsx";
 import { GoChevronDown } from "react-icons/go";
 import CartProductCard from "../components/CartProductCard.tsx";
 import { clearCart } from "../store/slices/AddToCartSlice.ts";
 import { Link } from "react-router-dom";
-import { useAppDispatch } from "../hooks/useAppSelectorAndUseAppDispatch.tsx";
+import { useAppDispatch } from "../hooks/useRedux.ts";
 
 const Cart = () => {
   const dispatch = useAppDispatch();
 
   const handleClearCart = () => {
-    dispatch(clearCart()); // Dispatch the clear action to clear the cart
+    dispatch(clearCart());
   };
 
   return (

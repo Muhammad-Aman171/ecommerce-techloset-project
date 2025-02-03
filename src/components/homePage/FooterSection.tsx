@@ -5,6 +5,11 @@ import HeadphoneImg from "../../assets/imgs/headphone.png";
 import { TbBrandGoogle } from "react-icons/tb";
 import { RiFacebookCircleLine } from "react-icons/ri";
 import { PiWhatsappLogo } from "react-icons/pi";
+import {
+  ABOUT_US,
+  GET_HELP,
+  FIND_PRODUCT,
+} from "../../constant/ConstantsData.ts";
 
 const FooterSection: React.FC = () => {
   return (
@@ -68,36 +73,17 @@ const FooterSection: React.FC = () => {
                 Find product
               </h3>
               <div className="flex flex-col gap-y-[10px] list-disc marker:text-footerSectionTextColor text-start ">
-                <div className="flex gap-x-2.5 text-[19.38px] text-textColor leading-[29.07px] ">
-                  <span className="text-footerSectionTextColor font-extrabold ">
-                    &#8226;
-                  </span>
-                  <p>Brownze arnold</p>
-                </div>
-                <div className="flex gap-x-2.5 text-[19.38px] text-textColor leading-[29.07px] ">
-                  <span className="text-footerSectionTextColor font-extrabold ">
-                    &#8226;
-                  </span>
-                  <p>Chronograph blue</p>{" "}
-                </div>
-                <div className="flex gap-x-2.5 text-[19.38px] text-textColor leading-[29.07px] ">
-                  <span className="text-footerSectionTextColor font-extrabold ">
-                    &#8226;
-                  </span>
-                  <p>Smart phones</p>{" "}
-                </div>
-                <div className="flex gap-x-2.5 text-[19.38px] text-textColor leading-[29.07px] ">
-                  <span className="text-footerSectionTextColor font-extrabold ">
-                    &#8226;
-                  </span>
-                  <p>Automatic watch</p>
-                </div>
-                <div className="flex gap-x-2.5 text-[19.38px] text-textColor leading-[29.07px] ">
-                  <span className="text-footerSectionTextColor font-extrabold ">
-                    &#8226;
-                  </span>
-                  <p> Hair straighteners</p>
-                </div>
+                {FIND_PRODUCT?.map((data, index) => (
+                  <div
+                    key={index}
+                    className="flex gap-x-2.5 text-[19.38px] text-textColor leading-[29.07px] "
+                  >
+                    <span className="text-footerSectionTextColor font-extrabold ">
+                      {data.bullets}
+                    </span>
+                    <p>{data.title}</p>
+                  </div>
+                ))}
               </div>
             </div>
             <div className="  flex flex-col items-start ">
@@ -105,36 +91,17 @@ const FooterSection: React.FC = () => {
                 Get help
               </h3>
               <div className="flex flex-col gap-y-[10px] list-disc marker:text-footerSectionTextColor text-start ">
-                <div className="flex gap-x-2.5 text-[19.38px] text-textColor leading-[29.07px] ">
-                  <span className="text-footerSectionTextColor font-extrabold ">
-                    &#8226;
-                  </span>
-                  <p>About us</p>
-                </div>
-                <div className="flex gap-x-2.5 text-[19.38px] text-textColor leading-[29.07px] ">
-                  <span className="text-footerSectionTextColor font-extrabold ">
-                    &#8226;
-                  </span>
-                  <p>Contact us</p>{" "}
-                </div>
-                <div className="flex gap-x-2.5 text-[19.38px] text-textColor leading-[29.07px] ">
-                  <span className="text-footerSectionTextColor font-extrabold ">
-                    &#8226;
-                  </span>
-                  <p>Return policy</p>{" "}
-                </div>
-                <div className="flex gap-x-2.5 text-[19.38px] text-textColor leading-[29.07px] ">
-                  <span className="text-footerSectionTextColor font-extrabold ">
-                    &#8226;
-                  </span>
-                  <p>Privacy policy</p>
-                </div>
-                <div className="flex gap-x-2.5 text-[19.38px] text-textColor leading-[29.07px] ">
-                  <span className="text-footerSectionTextColor font-extrabold ">
-                    &#8226;
-                  </span>
-                  <p>Payment policy</p>
-                </div>
+                {GET_HELP?.map((data, index) => (
+                  <div
+                    key={index}
+                    className="flex gap-x-2.5 text-[19.38px] text-textColor leading-[29.07px] "
+                  >
+                    <span className="text-footerSectionTextColor font-extrabold ">
+                      {data.bullets}
+                    </span>
+                    <p>{data.title}</p>
+                  </div>
+                ))}
               </div>
             </div>
             <div className="  flex flex-col items-start ">
@@ -142,36 +109,17 @@ const FooterSection: React.FC = () => {
                 About us
               </h3>
               <div className="flex flex-col gap-y-[10px] list-disc marker:text-footerSectionTextColor text-start ">
-                <div className="flex gap-x-2.5 text-[19.38px] text-textColor leading-[29.07px] ">
-                  <span className="text-footerSectionTextColor font-extrabold ">
-                    &#8226;
-                  </span>
-                  <p>News</p>
-                </div>
-                <div className="flex gap-x-2.5 text-[19.38px] text-textColor leading-[29.07px] ">
-                  <span className="text-footerSectionTextColor font-extrabold ">
-                    &#8226;
-                  </span>
-                  <p>Service</p>{" "}
-                </div>
-                <div className="flex gap-x-2.5 text-[19.38px] text-textColor leading-[29.07px] ">
-                  <span className="text-footerSectionTextColor font-extrabold ">
-                    &#8226;
-                  </span>
-                  <p>Our policy</p>{" "}
-                </div>
-                <div className="flex gap-x-2.5 text-[19.38px] text-textColor leading-[29.07px] ">
-                  <span className="text-footerSectionTextColor font-extrabold ">
-                    &#8226;
-                  </span>
-                  <p>Custmer care</p>
-                </div>
-                <div className="flex gap-x-2.5 text-[19.38px] text-textColor leading-[29.07px] ">
-                  <span className="text-footerSectionTextColor font-extrabold ">
-                    &#8226;
-                  </span>
-                  <p>Faq’s</p>
-                </div>
+                {ABOUT_US?.map((data, index) => (
+                  <div
+                    key={index}
+                    className="flex gap-x-2.5 text-[19.38px] text-textColor leading-[29.07px] "
+                  >
+                    <span className="text-footerSectionTextColor font-extrabold ">
+                      {data.bullets}
+                    </span>
+                    <p>{data.title}</p>
+                  </div>
+                ))}
               </div>
             </div>
           </div>

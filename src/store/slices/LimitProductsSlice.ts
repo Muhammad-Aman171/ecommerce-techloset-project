@@ -1,13 +1,11 @@
 import { createSlice, createAsyncThunk, PayloadAction } from "@reduxjs/toolkit";
-import axios from "axios";
 import { Products, ProductState } from "../../types/types";
+import AxiosIntance from "../../utils/AxiosIntance.ts";
 
 export const fetchProductInLimits = createAsyncThunk(
   "product/fetchProductInLimits",
   async () => {
-    const response = await axios.get(
-      "https://fakestoreapi.com/products?limit=6"
-    );
+    const response = await AxiosIntance.get("?limit=6");
     return response.data;
   }
 );

@@ -1,4 +1,3 @@
-// store.js
 import { configureStore } from "@reduxjs/toolkit";
 import productReducer from "./slices/ProductsSlice.ts";
 import limitProductsReducer from "./slices/LimitProductsSlice.ts";

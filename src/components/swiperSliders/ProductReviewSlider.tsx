@@ -6,7 +6,7 @@ import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
 import { Pagination } from "swiper/modules";
 import { Link } from "react-router-dom";
-import useProductReviewSlider from "../../hooks/useProductReviewSlider.tsx";
+import useProductReviewSlider from "../../hooks/useProductReviewSlider.ts";
 
 const ProductReview: React.FC = () => {
   const { limitProducts, status, error } = useProductReviewSlider();
@@ -21,9 +21,9 @@ const ProductReview: React.FC = () => {
   return (
     <div className="">
       <Swiper
-        modules={[Navigation, Pagination]} // Enable Navigation and Pagination
-        spaceBetween={30} // Gap between slides
-        slidesPerView={3} // Show 3 slides at a time
+        modules={[Navigation, Pagination]} 
+        spaceBetween={30} 
+        slidesPerView={3}
         loop={true}
         breakpoints={{
           1024: { slidesPerView: 3, spaceBetween: 30 },

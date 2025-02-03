@@ -5,7 +5,7 @@ import { RxCrossCircled } from "react-icons/rx";
 import {
   useAppDispatch,
   useAppSelector,
-} from "../hooks/useAppSelectorAndUseAppDispatch.tsx";
+} from "../hooks/useRedux.ts";
 
 const CartProductCard: React.FC = () => {
   const dispatch = useAppDispatch();

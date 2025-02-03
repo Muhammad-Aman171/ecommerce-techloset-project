@@ -2,7 +2,7 @@ import { filterByCategory } from "../store/slices/FilterCategoriesSlice.ts";
 import {
   useAppDispatch,
   useAppSelector,
-} from "./useAppSelectorAndUseAppDispatch.tsx";
+} from "./useRedux.ts";
 
 const usePopularProductsBtn = () => {
   const dispatch = useAppDispatch();

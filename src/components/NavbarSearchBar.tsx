@@ -4,7 +4,7 @@ import { AiOutlineUser } from "react-icons/ai";
 import { GoHeart } from "react-icons/go";
 import { BsCart3 } from "react-icons/bs";
 import Logo from "../assets/imgs/logo 1.png";
-import { useAppSelector } from "../hooks/useAppSelectorAndUseAppDispatch.tsx";
+import { useAppSelector } from "../hooks/useRedux.ts";
 
 const NavbarSearchBar: React.FC = () => {
   const cartItems = useAppSelector((state) => state.addToCartSlice.items);

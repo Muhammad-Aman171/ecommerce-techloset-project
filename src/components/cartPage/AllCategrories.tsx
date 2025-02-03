@@ -2,7 +2,7 @@ import React from "react";
 import CheckBoxCategroy from "../CheckBoxCategroy.tsx";
 import ProductCard from "../ProductCard.tsx";
 import LaptopSale from "../LaptopSale.tsx";
-import useAllCategrories from "../../hooks/useAllCategrories.tsx";
+import useAllCategrories from "../../hooks/useAllCategrories.ts";
 
 const AllCategrories: React.FC = () => {
   const { status, error } = useAllCategrories();

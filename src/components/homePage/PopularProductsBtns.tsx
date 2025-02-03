@@ -1,7 +1,7 @@
-import Button from "../buttons/button.tsx";
+import Button from "../buttons/Button.tsx";
 import React from "react";
-import { buttons } from "../../constant/ConstantsData.tsx";
-import usePopularProductsBtn from "../../hooks/usePopularProductsBtn.tsx";
+import { BUTTONS } from "../../constant/ConstantsData.ts";
+import usePopularProductsBtn from "../../hooks/usePopularProductsBtn.ts";
 
 const PopularProducts: React.FC = () => {
   const { handleFilter, status } = usePopularProductsBtn();
@@ -16,7 +16,7 @@ const PopularProducts: React.FC = () => {
         </h1>
       </div>
       <div className="flex items-center justify-center flex-wrap gap-3 ">
-        {buttons?.map((buttonTitle, index) => (
+        {BUTTONS?.map((buttonTitle, index) => (
           <Button
             key={index}
             label={buttonTitle.label}

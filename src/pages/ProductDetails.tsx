@@ -1,12 +1,12 @@
 import React from "react";
 import StarImg from "../assets/imgs/star.png";
-import Button from "../components/buttons/button.tsx";
+import Button from "../components/buttons/Button.tsx";
 import { GoHeart } from "react-icons/go";
 import { TbBrandGoogle } from "react-icons/tb";
 import { RiFacebookCircleLine } from "react-icons/ri";
 import { PiWhatsappLogo } from "react-icons/pi";
 import { GoCheck } from "react-icons/go";
-import useProductDetailsPage from "../hooks/useProductDetailsPage.tsx";
+import useProductDetailsPage from "../hooks/useProductDetailsPage.ts";
 
 const ProductDetails: React.FC = () => {
   const { count, setCount, product } = useProductDetailsPage();

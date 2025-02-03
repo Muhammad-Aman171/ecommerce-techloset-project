@@ -2,7 +2,7 @@ import  { useEffect } from "react";
 import {
   useAppDispatch,
   useAppSelector,
-} from "./useAppSelectorAndUseAppDispatch.tsx";
+} from "./useRedux.ts";
 import { fetchProducts } from "../store/slices/ProductsSlice.ts";
 
 const useAllCategrories = () => {
