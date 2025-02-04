@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "./buttons/Click.tsx";
+import Button from "./buttons/Button.tsx";
 import BackImg from "../assets/imgs/backgroundimg.png";
 
 const LaptopSale: React.FC = () => {
