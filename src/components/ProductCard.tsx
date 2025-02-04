@@ -31,7 +31,7 @@ const ProductCard: React.FC<ProductCardTypesProps> = ({
               className="w-[154px] h-[154px] "
             />
             <span
-              className={`${heartStyle} h-[27.54px] w-[27.54px] bg-[#B3D4E5] flex items-center justify-center rounded-full`}
+              className={`${heartStyle} h-[27.54px] w-[27.54px] bg-forthBackgroundColor flex items-center justify-center rounded-full`}
             >
               <GoHeart />
             </span>

@@ -52,12 +52,12 @@ const ProductDetails: React.FC = () => {
                 <h3 className="text-[18.17px] text-thirdTextColor leading-[27.26px] font-medium   ">
                   Availability:
                 </h3>
-                <GoCheck className="text-[#30BD57] w-6 h-6 " />
-                <p className="text-[#30BD57] text-[18.17px] leading-[27.26px] font-medium text-nowrap  ">
+                <GoCheck className="text-twelveTextColor w-6 h-6 " />
+                <p className="text-twelveTextColor text-[18.17px] leading-[27.26px] font-medium text-nowrap  ">
                   In stock
                 </p>
               </div>
-              <p className="text-[15.93px] leading-[23.89px] text-[#5D5D5D] text-nowrap  ">
+              <p className="text-[15.93px] leading-[23.89px] text-fifteenTextColor text-nowrap  ">
                 Hurry up! only 34 product left in stock!
               </p>
             </div>
@@ -69,8 +69,8 @@ const ProductDetails: React.FC = () => {
                 <p className="text-[18.17px] text-thirdTextColor font-medium  ">
                   Color:
                 </p>
-                <span className="w-[18px] h-[18px] rounded-[50%] bg-[#D0EC48] "></span>
-                <span className="w-[18px] h-[18px] rounded-[50%] bg-[#565656]  "></span>
+                <span className="w-[18px] h-[18px] rounded-[50%] bg-seventhBackgrounfColor "></span>
+                <span className="w-[18px] h-[18px] rounded-[50%] bg-seventhBackgrounfColor  "></span>
               </div>
               <div className="flex items-center  flex-wrap  gap-x-[19.08px] max-md:gap-y-2.5   ">
                 <p className="text-[18.17px] text-thirdTextColor leading-[27.26px] font-medium  ">
@@ -157,9 +157,9 @@ const ProductDetails: React.FC = () => {
                 <p className="text-[18.17px] text-thirdTextColor leading-[27.26px] font-medium">
                   Share:
                 </p>
-                <TbBrandGoogle className="w-6 h-6 text-[#3B3B3B] " />
-                <RiFacebookCircleLine className="w-6 h-6 text-[#3B3B3B] " />
-                <PiWhatsappLogo className="w-6 h-6 text-[#3B3B3B] " />
+                <TbBrandGoogle className="w-6 h-6 text-nineTextColor " />
+                <RiFacebookCircleLine className="w-6 h-6 text-nineTextColor " />
+                <PiWhatsappLogo className="w-6 h-6 text-nineTextColor " />
               </div>
             </div>
           </div>
@@ -167,7 +167,7 @@ const ProductDetails: React.FC = () => {
         <div className="flex items-center gap-x-[20px] mb-[35px] mt-[70px] max-md:flex-col max-md:gap-y-5 max-md:my-[30px] ">
           <Button
             content="Description"
-            className="w-[187px] h-[60px] text-[#373737] text-[20.68px] leading-[31.02px] font-medium rounded-[20px] border border-[#8F8F8F] "
+            className="w-[187px] h-[60px] text-eighteenTextColor text-[20.68px] leading-[31.02px] font-medium rounded-[20px] border border-twelveBorderColor "
           />
           <Button
             content="Reviews"
@@ -175,11 +175,11 @@ const ProductDetails: React.FC = () => {
           />
         </div>
 
-        <div className="border border-[#B8B8B8] rounded-[20px] w-full h-[223px] flex flex-col justify-center gap-y-[17px] text-start px-[50px] mx-[50px] max-md:mx-[10px] max-md:px-[20px] ">
+        <div className="border border-elevenBorderColor rounded-[20px] w-full h-[223px] flex flex-col justify-center gap-y-[17px] text-start px-[50px] mx-[50px] max-md:mx-[10px] max-md:px-[20px] ">
           <p className="text-[22.68px] text-secoundTextColor leading-[34.02px] font-semibold  ">
             Customer reviews
           </p>
-          <p className="text-[19.68px] text-[#4F4F4F] leading-[29.52px]  ">
+          <p className="text-[19.68px] text-thirteenTextColor leading-[29.52px]  ">
             No reviews yet
           </p>
           <Button

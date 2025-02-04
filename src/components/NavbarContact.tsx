@@ -8,7 +8,7 @@ const NavbarContact: React.FC = () => {
       <div className=" font-poppins  flex justify-center ">
         <div className="  flex justify-between  basis-[1330px] h-[75px] mx-[55px]  max-md:flex-col max-md:h-[85px] max-md:justify-center max-md:items-center max-md:mx-0 max-md:basis-0 max-sm:w-[300px] ">
           <div className=" flex items-center">
-            <h4 className="text-[#292D32] text-[14px] leading-[21px] text-nowrap ">
+            <h4 className="text-eightTextColor text-[14px] leading-[21px] text-nowrap ">
               Need help? Call us: (98+) 0234 456 789
             </h4>
           </div>

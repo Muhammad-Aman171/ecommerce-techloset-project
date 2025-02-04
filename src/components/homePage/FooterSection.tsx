@@ -13,7 +13,7 @@ import {
 
 const FooterSection: React.FC = () => {
   return (
-    <div className="bg-[#E2F4FF] py-[42px] ">
+    <div className="bg-backgroungColor py-[42px] ">
       <div className=" mx-[55px] max-md:mx-0 ">
         <div className=" bg-white mb-[41px] flex items-center justify-between gap-x-[20px] px-[20px] rounded-[20px] basis-[1330px] max-md:flex-col max-md:gap-y-3  ">
           <div className="max-md:mt-[14px]">
@@ -38,7 +38,7 @@ const FooterSection: React.FC = () => {
                 alt="headphone img does not show"
                 className="w-[45px] h-[45px]  "
               />
-              <p className="text-start text-[14px] leading-[21px] text-[#606060] font-semibold text-nowrap ">
+              <p className="text-start text-[14px] leading-[21px] text-elevenTextColor font-semibold text-nowrap ">
                 Call us 24/7 : <br /> (+62) 0123 567 789
               </p>
             </div>
@@ -54,7 +54,7 @@ const FooterSection: React.FC = () => {
                 64 st james boulevard hoswick , ze2 7zj
               </p>
             </div>
-            <hr className="border-[1px] h-[1px] border-[#9D9D9D] mb-[23px] " />
+            <hr className="border-[1px] h-[1px] border-tenBorderColor mb-[23px] " />
             <div className="flex max-md:gap-x-9  ">
               <span>
                 <TbBrandGoogle className="w-6 h-6" />

@@ -36,7 +36,7 @@ const MembersSection = () => {
                 </h3>
               </div>
             </div>
-            <div className="py-[11.13px] px-[26.64px] bg-[#E2F4FF] rounded-[20px] text-start   ">
+            <div className="py-[11.13px] px-[26.64px] bg-backgroungColor rounded-[20px] text-start   ">
               <p className="text-[13.17px] leading-[19.76px] text-secoundTextColor  ">
                 Lorem ipsum dolor sit amet consectetur. Nec sit enim tellus
                 faucibus bibendum ullamcorper. Phasellus tristique aenean at
@@ -57,7 +57,7 @@ const MembersSection = () => {
                 </h3>
               </div>
             </div>
-            <div className="py-[11.13px] px-[26.64px] bg-[#E2F4FF] rounded-[20px] text-start   ">
+            <div className="py-[11.13px] px-[26.64px] bg-backgroungColor rounded-[20px] text-start   ">
               <p className="text-[13.17px] leading-[19.76px] text-secoundTextColor  ">
                 Lorem ipsum dolor sit amet consectetur. Nec sit enim tellus
                 faucibus bibendum ullamcorper. Phasellus tristique aenean at
@@ -78,7 +78,7 @@ const MembersSection = () => {
                 </h3>
               </div>
             </div>
-            <div className="py-[11.13px] px-[26.64px] bg-[#E2F4FF] rounded-[20px] text-start   ">
+            <div className="py-[11.13px] px-[26.64px] bg-backgroungColor rounded-[20px] text-start   ">
               <p className="text-[13.17px] leading-[19.76px] text-secoundTextColor  ">
                 Lorem ipsum dolor sit amet consectetur. Nec sit enim tellus
                 faucibus bibendum ullamcorper. Phasellus tristique aenean at
@@ -99,7 +99,7 @@ const MembersSection = () => {
                 </h3>
               </div>
             </div>
-            <div className="py-[11.13px] px-[26.64px] bg-[#E2F4FF] rounded-[20px] text-start   ">
+            <div className="py-[11.13px] px-[26.64px] bg-backgroungColor rounded-[20px] text-start   ">
               <p className="text-[13.17px] leading-[19.76px] text-secoundTextColor  ">
                 Lorem ipsum dolor sit amet consectetur. Nec sit enim tellus
                 faucibus bibendum ullamcorper. Phasellus tristique aenean at
@@ -120,7 +120,7 @@ const MembersSection = () => {
                 </h3>
               </div>
             </div>
-            <div className="py-[11.13px] px-[26.64px] bg-[#E2F4FF] rounded-[20px] text-start   ">
+            <div className="py-[11.13px] px-[26.64px] bg-backgroungColor rounded-[20px] text-start   ">
               <p className="text-[13.17px] leading-[19.76px] text-secoundTextColor  ">
                 Lorem ipsum dolor sit amet consectetur. Nec sit enim tellus
                 faucibus bibendum ullamcorper. Phasellus tristique aenean at
@@ -141,7 +141,7 @@ const MembersSection = () => {
                 </h3>
               </div>
             </div>
-            <div className="py-[11.13px] px-[26.64px] bg-[#E2F4FF] rounded-[20px] text-start   ">
+            <div className="py-[11.13px] px-[26.64px] bg-backgroungColor rounded-[20px] text-start   ">
               <p className="text-[13.17px] leading-[19.76px] text-secoundTextColor  ">
                 Lorem ipsum dolor sit amet consectetur. Nec sit enim tellus
                 faucibus bibendum ullamcorper. Phasellus tristique aenean at

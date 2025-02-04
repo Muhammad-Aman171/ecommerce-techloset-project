@@ -89,14 +89,14 @@ const AllCategrories: React.FC = () => {
               </div>
               <div className="flex gap-x-6  ">
                 <span className="w-[15px] h-[15px] bg-primary rounded-[50%] "></span>
-                <span className="w-[15px] h-[15px] bg-[#E42424] rounded-[50%] "></span>
+                <span className="w-[15px] h-[15px] bg-eightBackgrounfColor rounded-[50%] "></span>
                 <span className="w-[15px] h-[15px] bg-textColor rounded-[50%] "></span>
-                <span className="w-[15px] h-[15px] bg-[#ACACAC] rounded-[50%] "></span>
-                <span className="w-[15px] h-[15px] bg-[#1D5F23] rounded-[50%] "></span>
-                <span className="w-[15px] h-[15px] bg-[#2E56A3] rounded-[50%] "></span>
-                <span className="w-[15px] h-[15px] bg-[#8131A7] rounded-[50%] "></span>
-                <span className="w-[15px] h-[15px] bg-[#BC2944] rounded-[50%] "></span>
-                <span className="w-[15px] h-[15px] bg-[#9BC14C] rounded-[50%] "></span>
+                <span className="w-[15px] h-[15px] bg-sixthBackgroundColor rounded-[50%] "></span>
+                <span className="w-[15px] h-[15px] bg-nineBackgrounfColor rounded-[50%] "></span>
+                <span className="w-[15px] h-[15px] bg-tenBackgrounfColor rounded-[50%] "></span>
+                <span className="w-[15px] h-[15px] bg-elevenBackgrounfColor rounded-[50%] "></span>
+                <span className="w-[15px] h-[15px] bg-fifthBackgroundColor rounded-[50%] "></span>
+                <span className="w-[15px] h-[15px] bg-twelveBackgrounfColor rounded-[50%] "></span>
               </div>
               <hr className=" border border-secoundBorderColor " />
             </div>

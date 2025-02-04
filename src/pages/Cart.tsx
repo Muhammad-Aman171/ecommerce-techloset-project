@@ -18,7 +18,7 @@ const Cart = () => {
       <div className="mt-[30px]  w-[1440px] ">
         <div className="grid grid-cols-6 gap-x-2.5 mx-[60px] max-md:mx-[10px] max-xl:grid-cols-1 ">
           <div className="col-span-4 max-xl:col-span-1 ">
-            <div className="grid grid-cols-5 items-center bg-[#E2F4FF] h-[56px] max-md:grid-cols-3    ">
+            <div className="grid grid-cols-5 items-center bg-backgroungColor h-[56px] max-md:grid-cols-3    ">
               <div className="col-span-2 text-start max-md:col-span-1 ">
                 <h3 className="text-[20.68px] text-thirdTextColor leading-[31.02px] font-medium ml-2 ">
                   Product
@@ -52,18 +52,18 @@ const Cart = () => {
               </Link>
               <Button
                 content="Update cart"
-                className="border border-[#A9A9A9] rounded-[32.42px] py-[19.5px] px-[42px] text-[22.7px] leading-[34.05px] text-[#797979] font-semibold text-nowrap max-xl:w-full max-xl:px-3 hover:text-white hover:bg-[#A9A9A9] "
+                className="border border-eightBorderColor rounded-[32.42px] py-[19.5px] px-[42px] text-[22.7px] leading-[34.05px] text-sixteenTextColor font-semibold text-nowrap max-xl:w-full max-xl:px-3 hover:text-white hover:bg-eightBorderColor "
               />
               <Button
                 onClick={handleClearCart}
                 content="Clear cart"
-                className="border border-[#C33131] rounded-[32.42px] py-[19.5px] px-[54px] text-[22.7px] text-[#C33131] leading-[34.05px] font-semibold text-nowrap max-xl:w-full max-xl:px-3   hover:text-white hover:bg-[#C33131] hover:border hover:border-[#C33131] "
+                className="border border-sixthTextColor rounded-[32.42px] py-[19.5px] px-[54px] text-[22.7px] text-sixthTextColor leading-[34.05px] font-semibold text-nowrap max-xl:w-full max-xl:px-3   hover:text-white hover:bg-sixthTextColor hover:border hover:border-sixthTextColor "
               />
             </div>
           </div>
 
           <div className="border border-yellow-700 col-span-2 max-xl:my-[50px] max-xl:col-span-1  ">
-            <h3 className="bg-[#E2F4FF] h-[56px] text-[20.68px] text-thirdTextColor leading-[31.02px] font-medium grid place-items-center text-nowrap ">
+            <h3 className="bg-backgroungColor h-[56px] text-[20.68px] text-thirdTextColor leading-[31.02px] font-medium grid place-items-center text-nowrap ">
               Cart total
             </h3>
             <div className="px-[35px] py-[21px] flex flex-col gap-y-[20px] ">
@@ -76,9 +76,9 @@ const Cart = () => {
                 </p>
               </div>
 
-              <hr className=" border border-[#AFAFAF]  " />
+              <hr className=" border border-sicthBorderColor  " />
 
-              <div className="border border-[#DFDFDF] px-[20px] py-[14px] rounded-[20px] flex items-center justify-between ">
+              <div className="border border-nineBorderColor px-[20px] py-[14px] rounded-[20px] flex items-center justify-between ">
                 <h4 className="text-[16.68px] text-thirdTextColor leading-[25.02px] ">
                   Enter coupon code
                 </h4>
@@ -87,9 +87,9 @@ const Cart = () => {
                 </h5>
               </div>
 
-              <hr className=" border border-[#AFAFAF]  " />
+              <hr className=" border border-sicthBorderColor  " />
 
-              <div className="border border-[#DFDFDF] px-[20px] py-[14px] rounded-[20px] flex items-center justify-between   ">
+              <div className="border border-nineBorderColor px-[20px] py-[14px] rounded-[20px] flex items-center justify-between   ">
                 <p className="text-[16.68px] leading-[25.02px] text-thirdTextColor  ">
                   County
                 </p>

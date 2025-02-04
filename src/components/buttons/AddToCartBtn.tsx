@@ -12,9 +12,9 @@ const AddToCartBtn: React.FC<AddToCartBtnProps> = ({ id, onClick }) => {
           console.error("onClick function is not defined!");
         }
       }}
-      className="bg-[#87BCD9] flex items-center justify-around w-[204px] h-[60px] rounded-[20px] hover:bg-[#a7d8f3]   "
+      className="bg-secondBackgroundColor flex items-center justify-around w-[204px] h-[60px] rounded-[20px] hover:bg-hoverBackgroundColor   "
     >
-      <h1 className="text-[15.74px] leading-[23.6px] font-semibold text-[#272727]   ">
+      <h1 className="text-[15.74px] leading-[23.6px] font-semibold text-forteenTextColor   ">
         {/* {count} */}
         Add to cart
       </h1>

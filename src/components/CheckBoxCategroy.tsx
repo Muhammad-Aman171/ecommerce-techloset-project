@@ -14,13 +14,13 @@ const CheckBoxCategroy: React.FC<CheckBoxCategroyTypesProps> = ({
         <input
           type="checkbox"
           value={value}
-          className=" w-[30px] h-[30px] checked:text-[#E2F4FF] "
+          className=" w-[30px] h-[30px] checked:text-backgroungColor "
         />
-        <h3 className="text-[16.09px] leading-[24.14px] text-[#222222] text-nowrap ">
+        <h3 className="text-[16.09px] leading-[24.14px] text-seventhTextColor text-nowrap ">
           {heading}
         </h3>
       </span>
-      <span className="text-[16.09px] leading-[24.14px] text-[#222222] ">
+      <span className="text-[16.09px] leading-[24.14px] text-seventhTextColor ">
         {number}
       </span>
     </div>

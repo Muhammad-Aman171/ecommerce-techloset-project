@@ -3,7 +3,7 @@ import { NumberCircleTypesProps } from "../../types/types";
 
 const NumberCircle: React.FC<NumberCircleTypesProps> = ({ content }) => {
   return (
-    <div className="bg-[#E2F4FF] h-[78px] w-[77px] rounded-[500px] text-primary flex items-center justify-center text-[22.09px] font-bold">
+    <div className="bg-backgroungColor h-[78px] w-[77px] rounded-[500px] text-primary flex items-center justify-center text-[22.09px] font-bold">
       {content}
     </div>
   );

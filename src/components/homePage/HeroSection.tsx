@@ -27,7 +27,7 @@ const HeroSection = () => {
           />
           <Button
             content="View more"
-            className="border border-[#316887] text-[#316887] font-semibold text-[16px] leading-[24px] px-[28px] py-[18.5px] rounded-[20px] max-md:w-[300px] max-md:h-[61px] max-md:mx-auto "
+            className="border border-tenTextColor text-tenTextColor font-semibold text-[16px] leading-[24px] px-[28px] py-[18.5px] rounded-[20px] max-md:w-[300px] max-md:h-[61px] max-md:mx-auto "
           />
         </div>
         <div className="ml-[110px] mt-10 justify-center items-center flex gap-x-3 max-md:ml-0  ">

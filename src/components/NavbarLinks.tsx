@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const NavbarLinks = () => {
   return (
     <div>
-      <div className="bg-[#F4F4F4] flex justify-center ">
+      <div className="bg-thirdBackgroundColor flex justify-center ">
         <div className=" font-poppins  flex justify-between basis-[1330px] items-center mx-[55px]  max-md:flex-col max-md:my-[20px] max-md:gap-y-2 ">
           <div className="flex basis-[800px] justify-between max-lg:basis-[400px] max-md:basis-0 ">
             <div className=" flex items-center bg-primary text-white py-6 px-4 ">

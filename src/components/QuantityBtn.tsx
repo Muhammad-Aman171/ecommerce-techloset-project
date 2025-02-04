@@ -7,16 +7,16 @@ const QuantityBtn = () => {
     <div className="flex items-center justify-center">
       <button
         onClick={() => setCount(count - 1)}
-        className="border border-secoundBorderColor bg-[#F2F2F2] w-[35px] h-[32px] grid place-items-center text-forthTextColor "
+        className="border border-secoundBorderColor bg-fifthBorderColor w-[35px] h-[32px] grid place-items-center text-forthTextColor "
       >
         -
       </button>
-      <span className="border border-secoundBorderColor bg-[#F2F2F2] w-[63px] h-[32px] grid place-items-center text-forthTextColor    ">
+      <span className="border border-secoundBorderColor bg-fifthBorderColor w-[63px] h-[32px] grid place-items-center text-forthTextColor    ">
         {count}
       </span>
       <button
         onClick={() => setCount(count + 1)}
-        className="border border-secoundBorderColor bg-[#F2F2F2] w-[35px] h-[32px] grid place-items-center text-forthTextColor"
+        className="border border-secoundBorderColor bg-fifthBorderColor w-[35px] h-[32px] grid place-items-center text-forthTextColor"
       >
         +
       </button>

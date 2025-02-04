@@ -48,7 +48,7 @@ const ProductReview: React.FC = () => {
                   <p className="text-[21.38px] font-semibold text-textColor leading-[32.07px] w-[170px] h-[30px]  ">
                     {limitProduct.title.slice(0, 10) + "..."}
                   </p>
-                  <p className="text-[18.85px] text-[#265F7F] leading-[28.27px]  font-medium ">
+                  <p className="text-[18.85px] text-seventeenTextColor leading-[28.27px]  font-medium ">
                     (6 items)
                   </p>
                 </div>

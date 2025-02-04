@@ -23,7 +23,7 @@ const NavbarSearchBar: React.FC = () => {
               <input
                 type="text"
                 placeholder="Search any things"
-                className="pl-[10px] placeholder-[#292D32] outline-none text-[14px] w-[270px] mr-10 "
+                className="pl-[10px] placeholder-eightTextColor outline-none text-[14px] w-[270px] mr-10 "
               />
               <h3 className="px-[40px] py-[16px] bg-primary rounded-[20px] text-[14px] text-white ">
                 Search

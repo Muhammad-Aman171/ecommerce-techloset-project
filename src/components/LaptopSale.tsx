@@ -17,10 +17,10 @@ const LaptopSale: React.FC = () => {
         content="New laptop"
         className="py-3 bg-primary w-[134px] rounded-[20px] text-white text-[14.09px] leading-[21.14px] font-medium mb-[36px] max-md:mb-3   "
       />
-      <h1 className="text-[41px] font-bold leading-[61.5px] text-[#2E8FC5] mb-[12px] max-md:hidden ">
+      <h1 className="text-[41px] font-bold leading-[61.5px] text-seventhTextColor mb-[12px] max-md:hidden ">
         Sale up to 50% off
       </h1>
-      <h1 className="text-[41px] font-bold leading-[61.5px] text-[#2E8FC5] mb-[12px] md:hidden text-nowrap  ">
+      <h1 className="text-[41px] font-bold leading-[61.5px] text-seventhTextColor mb-[12px] md:hidden text-nowrap  ">
         Sale up to <br /> 50% off
       </h1>
       <p className="text-[18px] leading-[27px] font-medium text-white mb-[36px]  max-md:mb-3 ">
