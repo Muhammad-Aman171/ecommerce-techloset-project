@@ -3,6 +3,7 @@ import Button from "../buttons/Button.tsx";
 import CameraImg from "../../assets/imgs/camera.png";
 import FillCircle from "../slidersCircles/FillCircle.tsx";
 import UnFillCircle from "../slidersCircles/UnFillCircle.tsx";
+import { HERO_BUTTON } from "../../constant/ConstantsData.ts";
 
 const HeroSection = () => {
   return (
@@ -21,14 +22,13 @@ const HeroSection = () => {
           </h1>
         </span>
         <div className="flex gap-x-5 max-md:flex-col max-md:gap-y-4   ">
-          <Button
-            content="Shop now"
-            className="bg-primary  text-white font-semibold text-[16px] leading-[24px] px-[32px] py-[18.5px] rounded-[20px] max-md:w-[300px] max-md:h-[61px] max-md:mx-0 "
-          />
-          <Button
-            content="View more"
-            className="border border-tenTextColor text-tenTextColor font-semibold text-[16px] leading-[24px] px-[28px] py-[18.5px] rounded-[20px] max-md:w-[300px] max-md:h-[61px] max-md:mx-auto "
-          />
+          {HERO_BUTTON.map((data, index) => (
+            <Button
+              key={index}
+              content={data.content}
+              className={data.className}
+            />
+          ))}
         </div>
         <div className="ml-[110px] mt-10 justify-center items-center flex gap-x-3 max-md:ml-0  ">
           <FillCircle />

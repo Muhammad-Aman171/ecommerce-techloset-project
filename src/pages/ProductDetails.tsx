@@ -10,6 +10,21 @@ import useProductDetailsPage from "../hooks/useProductDetailsPage.ts";
 
 const ProductDetails: React.FC = () => {
   const { count, setCount, product } = useProductDetailsPage();
+  const stars = Array(5).fill(null);
+  const size = [30, 56, 42, 48];
+
+  const PRODUCT_DETAILS_BUTTON = [
+    {
+      content: "Add to cart",
+      className:
+        "text-white text-[22.7px] bg-primary px-[56px] py-[19.5px] leading-[34.05px] font-semibold rounded-[32.42px] text-nowrap max-md:w-full",
+    },
+    {
+      content: "Buy it now",
+      className:
+        "text-white text-[22.7px] bg-primary px-[56px] py-[19.5px] leading-[34.05px] font-semibold rounded-[32.42px] text-nowrap ",
+    },
+  ];
 
   if (!product) {
     return <p>Loading product details...</p>;
@@ -38,11 +53,13 @@ const ProductDetails: React.FC = () => {
               </h2>
               <div className="flex items-center gap-x-[9.67px] text-nowrap ">
                 <div className="flex items-center gap-x-[9.67px] ">
-                  <img src={StarImg} alt="star img does not show" />
-                  <img src={StarImg} alt="star img does not show" />
-                  <img src={StarImg} alt="star img does not show" />
-                  <img src={StarImg} alt="star img does not show" />
-                  <img src={StarImg} alt="star img does not show" />
+                  {stars?.map((_, index) => (
+                    <img
+                      key={index}
+                      src={StarImg}
+                      alt="star img does not show"
+                    />
+                  ))}
                 </div>
                 <div className="text-[13.19px] leading-[19.79px] text-fifthTextColor font-medium ">
                   <p>No reviews</p>
@@ -76,18 +93,15 @@ const ProductDetails: React.FC = () => {
                 <p className="text-[18.17px] text-thirdTextColor leading-[27.26px] font-medium  ">
                   Size:
                 </p>
-                <p className="grid items-center w-[63px] h-[32px] bg-ProductDetailsBgColor ">
-                  30
-                </p>
-                <p className="grid items-center w-[63px] h-[32px] bg-ProductDetailsBgColor ">
-                  56
-                </p>
-                <p className="grid items-center w-[63px] h-[32px] bg-ProductDetailsBgColor ">
-                  42
-                </p>
-                <p className="grid items-center w-[63px] h-[32px] bg-ProductDetailsBgColor ">
-                  48
-                </p>
+
+                {size?.map((data, index) => (
+                  <p
+                    key={index}
+                    className="grid items-center w-[63px] h-[32px] bg-ProductDetailsBgColor "
+                  >
+                    {data}
+                  </p>
+                ))}
               </div>
               <div className="flex items-center gap-x-[19.08px] ">
                 <p className="text-[18.17px] text-thirdTextColor leading-[27.26px] font-medium   ">
@@ -113,14 +127,13 @@ const ProductDetails: React.FC = () => {
               </div>
 
               <div className="flex items-center justify-between gap-x-[29px] max-md:flex-col max-md:gap-y-[20px] ">
-                <Button
-                  content="Add to cart"
-                  className="text-white text-[22.7px] bg-primary px-[56px] py-[19.5px] leading-[34.05px] font-semibold rounded-[32.42px] text-nowrap max-md:w-full  "
-                />
-                <Button
-                  content="Buy it now"
-                  className="text-white text-[22.7px] bg-primary px-[56px] py-[19.5px] leading-[34.05px] font-semibold rounded-[32.42px] text-nowrap "
-                />
+                {PRODUCT_DETAILS_BUTTON?.map((data, index) => (
+                  <Button
+                    key={index}
+                    content={data.content}
+                    className={data.className}
+                  />
+                ))}
                 <span className="bg-ProductDetailsBgColor w-[74px] h-[73px] rounded-[500px] grid place-items-center max-md:hidden  ">
                   <GoHeart className=" w-9 h-9 " />
                 </span>

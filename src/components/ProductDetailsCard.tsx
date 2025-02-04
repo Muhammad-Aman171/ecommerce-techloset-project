@@ -3,6 +3,7 @@ import { AiTwotoneStar } from "react-icons/ai";
 import PlayGame from "../assets/imgs/palyGame.png";
 
 const ProductDetailsCard: React.FC = () => {
+  const stars = Array(5).fill(null);
   return (
     <div className="border border-thirdBorderColor rounded-[20px] flex items-center gap-x-[50px] py-[36px] px-[21.85px]  ">
       <div className="flex justify-center flex-grow-1 ">
@@ -20,11 +21,9 @@ const ProductDetailsCard: React.FC = () => {
           $11.93
         </p>
         <div className="flex gap-x-1">
-          <AiTwotoneStar className="w-[14.75px] h-[14.65px]" />
-          <AiTwotoneStar className="w-[14.75px] h-[14.65px]" />
-          <AiTwotoneStar className="w-[14.75px] h-[14.65px]" />
-          <AiTwotoneStar className="w-[14.75px] h-[14.65px]" />
-          <AiTwotoneStar className="w-[14.75px] h-[14.65px]" />
+          {stars?.map((_, index) => (
+            <AiTwotoneStar key={index} className="w-[14.75px] h-[14.65px]" />
+          ))}
         </div>
       </div>
     </div>

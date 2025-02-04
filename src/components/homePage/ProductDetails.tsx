@@ -7,8 +7,12 @@ import AddCartEye from "../buttons/AddCartEye.tsx";
 import FillCircle from "../slidersCircles/FillCircle.tsx";
 import UnFillCircle from "../slidersCircles/UnFillCircle.tsx";
 import ProductDetailsCard from "../ProductDetailsCard.tsx";
+import { NUMBER_CIRCLE } from "../../constant/ConstantsData.ts";
 
 const ProductDetails = () => {
+  const stars = Array(5).fill(null);
+  const productDetailsCard = Array(2).fill(null);
+
   return (
     <div className="my-20  flex items-center justify-center gap-x-8  max-xl:hidden ">
       <div className="border border-thirdBorderColor rounded-[20px] px-[29px] grid grid-cols-2 items-center justify-start gap-x-[62px] ">
@@ -24,18 +28,18 @@ const ProductDetails = () => {
               $11,70
             </p>
             <div className="flex gap-x-1 ">
-              <AiTwotoneStar className="w-[14.75px] h-[14.65px]  " />
-              <AiTwotoneStar className="w-[14.75px] h-[14.65px]  " />
-              <AiTwotoneStar className="w-[14.75px] h-[14.65px]  " />
-              <AiTwotoneStar className="w-[14.75px] h-[14.65px]  " />
-              <AiTwotoneStar className="w-[14.75px] h-[14.65px]  " />
+              {stars?.map((_, index) => (
+                <AiTwotoneStar
+                  key={index}
+                  className="w-[14.75px] h-[14.65px]"
+                />
+              ))}
             </div>
           </div>
           <div className="flex gap-x-2.5 ">
-            <NumberCircle content="57" />
-            <NumberCircle content="11" />
-            <NumberCircle content="33" />
-            <NumberCircle content="59" />
+            {NUMBER_CIRCLE?.map((data, index) => (
+              <NumberCircle key={index} content={data.toLocaleString()} />
+            ))}
           </div>
           <div className="flex gap-x-3  ">
             <AddToCartBtn />
@@ -48,8 +52,9 @@ const ProductDetails = () => {
         </div>
       </div>
       <div className="flex flex-col gap-y-[23px]  ">
-        <ProductDetailsCard />
-        <ProductDetailsCard />
+        {productDetailsCard?.map((_, index) => (
+          <ProductDetailsCard key={index} />
+        ))}
       </div>
     </div>
   );

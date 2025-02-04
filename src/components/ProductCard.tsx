@@ -11,6 +11,7 @@ const ProductCard: React.FC<ProductCardTypesProps> = ({
   className,
   heartStyle,
 }) => {
+  const stars = Array(5).fill(null);
   const { handleAddToCart, displayProduct, status, error } = useProductCard();
   if (status === "loading") {
     return <p>Loading...</p>;
@@ -44,11 +45,12 @@ const ProductCard: React.FC<ProductCardTypesProps> = ({
               {`$${product.price}`}
             </p>
             <div className="flex gap-x-1">
-              <AiTwotoneStar className="w-[14.75px] h-[14.65px]" />
-              <AiTwotoneStar className="w-[14.75px] h-[14.65px]" />
-              <AiTwotoneStar className="w-[14.75px] h-[14.65px]" />
-              <AiTwotoneStar className="w-[14.75px] h-[14.65px]" />
-              <AiTwotoneStar className="w-[14.75px] h-[14.65px]" />
+              {stars?.map((_, index) => (
+                <AiTwotoneStar
+                  key={index}
+                  className="w-[14.75px] h-[14.65px]"
+                />
+              ))}
             </div>
           </div>
           <div className="opacity-0 absolute bottom-3 group-hover:opacity-100 duration-500">

@@ -21,8 +21,8 @@ const ProductReview: React.FC = () => {
   return (
     <div className="">
       <Swiper
-        modules={[Navigation, Pagination]} 
-        spaceBetween={30} 
+        modules={[Navigation, Pagination]}
+        spaceBetween={30}
         slidesPerView={3}
         loop={true}
         breakpoints={{
