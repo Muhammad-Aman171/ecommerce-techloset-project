@@ -15,7 +15,6 @@ const AddToCartBtn: React.FC<AddToCartBtnProps> = ({ id, onClick }) => {
       className="bg-secondBackgroundColor flex items-center justify-around w-[204px] h-[60px] rounded-[20px] hover:bg-hoverBackgroundColor   "
     >
       <h1 className="text-[15.74px] leading-[23.6px] font-semibold text-forteenTextColor   ">
-        {/* {count} */}
         Add to cart
       </h1>
       <div className=" bg-primary rounded-full w-[30px] h-[30px] flex items-center justify-center ">

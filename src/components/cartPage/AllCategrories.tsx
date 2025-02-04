@@ -101,7 +101,6 @@ const AllCategrories: React.FC = () => {
               <hr className=" border border-secoundBorderColor " />
             </div>
             <div className="flex flex-col  gap-y-3 mt-[20px] max-lg:hidden">
-              {" "}
               <div className="flex justify-between   ">
                 <h3 className="text-secoundTextColor text-[16.09px] leading-[24.14px] font-medium ">
                   Size
